@@ -19,6 +19,9 @@ function App() {
         <p>
           {!data ? "Loading..." : data}
         </p>
+        <div>
+          I like cheeseburgers.
+        </div>
       </header>
     </div>
   );
