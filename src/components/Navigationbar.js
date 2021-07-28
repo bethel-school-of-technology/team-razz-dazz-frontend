@@ -32,6 +32,9 @@ const Navigationbar = () => {
             <Nav.Link href="/gallery" id="linktext">
               Gallery
             </Nav.Link>
+            <Nav.Link href="/orderpage" id="linktext">
+              Order Now
+            </Nav.Link>
             <Nav.Link href="/login" id="linktext">
               Login
             </Nav.Link>

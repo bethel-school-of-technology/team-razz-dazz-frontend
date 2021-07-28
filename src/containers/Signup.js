@@ -1,23 +1,18 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
 import SignupForm from "../components/SignupForm";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const Signup = () => {
   return (
-    <Container fluid>
+    <div className="App container py-3">
+      <h1 align="center">Insert Signup banner</h1>
       <Row className="justify-content-center">
         <Col md="4">
-          <h1>Insert Signup banner</h1>
+          <SignupForm/>
         </Col>
       </Row>
-      <Row className="justify-content-center">
-        <Col md="4">
-          <SignupForm />
-        </Col>
-      </Row>
-    </Container>
+    </div>
   );
 };
 
