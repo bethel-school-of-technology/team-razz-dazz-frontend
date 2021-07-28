@@ -4,16 +4,15 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 // import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Navigationbar.css";
-import Cookie from "../assets/cookie.svg";
+import Cookie from "../assets/cookielogo.png";
 
 const Navigationbar = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="info" variant="dark">
       <Container>
         <Navbar.Brand href="/">
-          <img src={Cookie} alt="cookie" id="cookie" />
+          <img src={Cookie} alt="cookie" id="cookie" href="/" />
         </Navbar.Brand>
-        <Navbar.Brand>NobleCookies</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -30,9 +29,13 @@ const Navigationbar = () => {
             </NavDropdown> */}
           </Nav>
           <Nav>
-            <Nav.Link href="/gallery">Gallery</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link eventKey={2} href="/signup">
+            <Nav.Link href="/gallery" id="linktext">
+              Gallery
+            </Nav.Link>
+            <Nav.Link href="/login" id="linktext">
+              Login
+            </Nav.Link>
+            <Nav.Link eventKey={2} href="/signup" id="linktext">
               Sign up
             </Nav.Link>
           </Nav>

@@ -1,4 +1,8 @@
 #cookie {
-    max-width: 30px;
+    max-width: 150px;
     height: auto;
+}
+
+#linktext {
+    color: rgb(2, 2, 2);
 }
