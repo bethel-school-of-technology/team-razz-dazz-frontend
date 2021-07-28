@@ -1,14 +1,11 @@
 import React from 'react';
 import HomeTitle from "../components/HomeTitle";
-import Container from "react-bootstrap/Container";
 
 const Home = () => {
     return (
-      <Container fluid>
-        <div>
-          <HomeTitle />
-        </div>
-      </Container>
+      <div className="App container py-3" align="center">
+        <HomeTitle />
+      </div>
     );
 }
 

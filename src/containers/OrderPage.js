@@ -1,23 +1,19 @@
 import React from "react";
-import LoginForm from "../components/LoginForm";
+import S3Upload from "../components/S3Upload";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const Login = () => {
+const OrderPage = () => {
   return (
     <div className="App container py-3">
+      <h1 align="center">Insert Order Form</h1>
       <Row className="justify-content-center">
         <Col md="4">
-          <h1>Insert Login banner</h1>
-        </Col>
-      </Row>
-      <Row className="justify-content-center">
-        <Col md="4">
-          <LoginForm />
+          <S3Upload />
         </Col>
       </Row>
     </div>
   );
 };
 
-export default Login;
+export default OrderPage;
