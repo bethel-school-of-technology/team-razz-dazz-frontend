@@ -7,8 +7,8 @@ const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const signIn = (e) => {
-    e.preventDefault();
+  const signIn = (event) => {
+    event.preventDefault();
 
     if (username !== "" && password !== "") {
       const req = {
@@ -25,8 +25,8 @@ const LoginForm = () => {
   };
 
   return (
-      <Form>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form onSubmit={signIn}>
+        <Form.Group className="mb-3" controlId="formBasicUsername">
           <Form.Label>Username</Form.Label>
           <Form.Control
             type="text"
@@ -43,6 +43,7 @@ const LoginForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
+        <br/>
         <Button onSubmit={signIn} variant="primary" type="submit">
           Submit
         </Button>
