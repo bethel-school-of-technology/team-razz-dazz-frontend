@@ -1,14 +1,11 @@
-import React from 'react';
-import './HomeTitle.css';
+import React from "react";
 
-
-function HomeTitle() {
-    return (
-      <div>
-        <h1>Yo Momma</h1>
-        <h2>Is Hot Cheetos Yeah</h2>
-      </div>
-    );
-}
+const HomeTitle = () => {
+  return (
+    <div>
+      <h1>Home page goes here.</h1>
+    </div>
+  );
+};
 
 export default HomeTitle;

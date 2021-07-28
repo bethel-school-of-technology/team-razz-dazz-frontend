@@ -1,12 +1,15 @@
 import React from 'react';
 import HomeTitle from "../components/HomeTitle";
+import Container from "react-bootstrap/Container";
 
-function Home () {
+const Home = () => {
     return (
+      <Container fluid>
         <div>
-        <HomeTitle />
+          <HomeTitle />
         </div>
-    )
+      </Container>
+    );
 }
 
 export default Home;
