@@ -3,6 +3,7 @@ import axios from "axios";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 // import { withRouter } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 
 const SignupForm = () => {
@@ -11,6 +12,7 @@ const SignupForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const history = useHistory();
 
 
   const signUp = (event) => {
@@ -24,12 +26,14 @@ const SignupForm = () => {
         lastName,
         email
       };
+      
 
 
       axios.post("http://localhost:3000/api/user/register", req).then((result) => {
         const token = result.data.jwt;
         localStorage.setItem("myJWT", token);
         console.log(result.data);
+        history.push("/login");
       });
     }
   };
