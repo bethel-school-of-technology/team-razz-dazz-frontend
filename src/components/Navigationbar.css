@@ -4,5 +4,15 @@
 }
 
 #linktext {
-    color: rgb(2, 2, 2);
+    color: rgba(0, 0, 0, 0.557);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#linktext:hover {
+    color: rgba(0, 0, 0, 0.797);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#navbar {
+    background-color: rgb(27, 186, 198);
 }

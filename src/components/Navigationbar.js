@@ -8,7 +8,7 @@ import Cookie from "../assets/cookielogo.png";
 
 const Navigationbar = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="info" variant="dark">
+    <Navbar collapseOnSelect expand="lg" variant="dark" id="navbar">
       <Container>
         <Navbar.Brand href="/">
           <img src={Cookie} alt="cookie" id="cookie" href="/" />
