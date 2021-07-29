@@ -6,6 +6,7 @@ import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import GalleryPage from "./containers/GalleryPage";
 import OrderPage from "./containers/OrderPage";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
