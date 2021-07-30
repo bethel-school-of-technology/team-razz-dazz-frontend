@@ -1,6 +1,6 @@
 import React from "react";
 import "../components/HomeTitle.css";
-import { MDBBtn } from "mdbreact";
+import { MDBBtn } from "mdb-react-ui-kit";
 
 
 const HomeTitle = () => {
