@@ -1,12 +1,12 @@
 import React from 'react';
 import HomeTitle from "../components/HomeTitle";
 
-function Home () {
+const Home = () => {
     return (
-        <div>
+      <div className="App container py-3" align="center">
         <HomeTitle />
-        </div>
-    )
+      </div>
+    );
 }
 
 export default Home;

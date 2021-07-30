@@ -1,14 +1,17 @@
-import React from 'react';
-import './HomeTitle.css';
+import React from "react";
+import "../components/HomeTitle.css";
+import { MDBBtn } from "mdbreact";
 
 
-function HomeTitle() {
-    return (
-      <div>
-        <h1>Yo Momma</h1>
-        <h2>Is Hot Cheetos</h2>
-      </div>
-    );
-}
+const HomeTitle = () => {
+  return (
+    <div>
+      <h1>Home stuffs goes here</h1>
+      <MDBBtn gradient="blue">Already A Noble Cookie Addict? Click to Login</MDBBtn>
+      <MDBBtn gradient="peach">New to The Noble Cookie Experience? Sign Up Here!</MDBBtn>
+    </div>
+  );
+};
+
 
 export default HomeTitle;
