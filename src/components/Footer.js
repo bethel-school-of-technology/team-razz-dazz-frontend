@@ -13,9 +13,26 @@ const Footer = () => {
         <a className="text-dark" href="/">
           The Noble Cookie
         </a>
+       
+
+        <button type="button" class="btn btn-primary btn-lg btn-floating">
+  <i class="fab fa-facebook-f"></i>
+</button>
+
+
+</button>
+
+
       </div>
     </MDBFooter>
   );
 }
 
+
+
+
+
 export default Footer;
+
+
+
