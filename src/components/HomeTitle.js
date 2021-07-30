@@ -1,4 +1,5 @@
 import React from "react";
+import "../components/HomeTitle.css";
 
 const HomeTitle = () => {
   return (
