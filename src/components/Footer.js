@@ -1,6 +1,7 @@
 import React from "react";
 import { MDBFooter } from "mdb-react-ui-kit";
 import "./Footer.css";
+import { MDBIcon } from "mdb-react-ui-kit";
 
 const Footer = () => {
   return (
@@ -13,6 +14,7 @@ const Footer = () => {
         <a className="text-dark" href="/">
           The Noble Cookie
         </a>
+
        
 
         <button type="button" class="btn btn-primary btn-lg btn-floating">
@@ -23,6 +25,8 @@ const Footer = () => {
 </button>
 
 
+        <MDBIcon fab icon="instagram" href="instagram.com" id="insta" />
+        <MDBIcon fab icon="twitter" href="instagram.com" id="insta" />
       </div>
     </MDBFooter>
   );

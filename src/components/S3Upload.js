@@ -1,17 +1,8 @@
 import React from 'react';
 import S3FileUpload from 'react-s3';
 import Form from "react-bootstrap/Form";
+import config from "../keys/keyconfigS3";
 
-
-
-
-const config = {
-  bucketName: "thenoblecookies",
-  dirName: "CookiePics" /* optional */,
-  region: "us-east-1",
-  accessKeyId: "AKIARRDBSFQ5NOXWEKMT",
-  secretAccessKey: "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",
-};
 
 const S3Upload = () => {
     const upload = (e) => {
