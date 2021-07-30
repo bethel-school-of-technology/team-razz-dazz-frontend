@@ -1,5 +1,7 @@
 import React from "react";
+import "../components/HomeTitle.css";
 import { MDBBtn } from "mdbreact";
+
 
 const HomeTitle = () => {
   return (
