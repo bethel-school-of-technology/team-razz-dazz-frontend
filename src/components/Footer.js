@@ -14,6 +14,17 @@ const Footer = () => {
         <a className="text-dark" href="/">
           The Noble Cookie
         </a>
+
+       
+
+        <button type="button" class="btn btn-primary btn-lg btn-floating">
+  <i class="fab fa-facebook-f"></i>
+</button>
+
+
+</button>
+
+
         <MDBIcon fab icon="instagram" href="instagram.com" id="insta" />
         <MDBIcon fab icon="twitter" href="instagram.com" id="insta" />
       </div>
@@ -21,4 +32,11 @@ const Footer = () => {
   );
 }
 
+
+
+
+
 export default Footer;
+
+
+
