@@ -6,7 +6,7 @@
 .pnp.js
 
 # secret S3 Keys
-/src/keys
+/keys
 
 # testing
 /coverage

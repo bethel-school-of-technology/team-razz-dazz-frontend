@@ -43,7 +43,10 @@ const Navigationbar = () => {
               <MDBNavbarLink href="/orderpage">Order Now</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href="#">Pricing</MDBNavbarLink>
+              <MDBNavbarLink href="/login">Login</MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href="/signup">Signup</MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>

@@ -5,10 +5,7 @@ const UserProfile = () => {
   const [profile, setProfile] = useState([]);
 
   const token = localStorage.getItem("myJWT");
-
-  if (!token) {
-    console.log(token);
-  }
+  console.log('PROFILE local storage', token)
 
   useEffect(() => {
     axios.get('http://localhost:3000/api/user/profile').then(result => {
@@ -16,7 +13,9 @@ const UserProfile = () => {
       console.log(result);
       setProfile(result.data);
     })
-  }, []);
+  }, [token]);
+
+  console.log(profile)
 
 
   return (
