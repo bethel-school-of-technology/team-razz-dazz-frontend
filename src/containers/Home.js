@@ -3,7 +3,7 @@ import HomeTitle from "../components/HomeTitle";
 
 const Home = () => {
     return (
-      <div className="App container py-3" align="center">
+      <div>
         <HomeTitle />
       </div>
     );
