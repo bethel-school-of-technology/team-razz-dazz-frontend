@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { withRouter } from 'react-router';
 
-const LoginForm = () => {
+const LoginForm = ({history}) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,6 +21,7 @@ const LoginForm = () => {
         const token = result.data.jwt;
         localStorage.setItem("myJWT", token);
         console.log(result.data);
+        history.push('/userprofile')
       });
     }
   };
@@ -51,4 +53,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default withRouter(LoginForm);

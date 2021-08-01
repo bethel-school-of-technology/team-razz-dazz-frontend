@@ -7,6 +7,7 @@ import Signup from "./containers/Signup";
 import GalleryPage from "./containers/GalleryPage";
 import OrderPage from "./containers/OrderPage";
 import Footer from "./components/Footer";
+import UserProfile from "./containers/UserProfile";
 
 export default function App() {
   return (
@@ -16,6 +17,9 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path="/userprofile">
+            <UserProfile />
+          </Route>
           <Route path="/orderpage">
             <OrderPage />
           </Route>
