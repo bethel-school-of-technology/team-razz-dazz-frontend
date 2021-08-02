@@ -11,7 +11,7 @@ const HomeTitle = () => {
           <div className="text-white">
             <h1 className="mb-3">The Noble Cookie</h1>
             <h5 className="mb-4">
-              Best &amp; free guide of responsive web design
+              Beautifully designed, carefully crafted custom cookies so good, they'd make your grandma weep with jealousy!
             </h5>
 
             <MDBBtn id="homebutton1" className="btn btn-outline-light btn-lg m-2">
