@@ -13,14 +13,14 @@
 
 #homebutton1 {
   background-color: hotpink;
-  font-size: small;
+  font-size: x-small;
   font-weight: bolder;
   color:lightseagreen;
 }
 
 #homebutton2 {
   background-color: lightseagreen;
-  font-size: small;
+  font-size: x-small;
   font-weight: bolder;
   color: hotpink;
 }
