@@ -2,6 +2,7 @@ import React from "react";
 import S3Upload from "../components/S3Upload";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import OrderForm from "../components/OrderForm";
 
 const OrderPage = () => {
   return (
@@ -9,6 +10,7 @@ const OrderPage = () => {
       <h1 align="center">Insert Order Form</h1>
       <Row className="justify-content-center">
         <Col md="4">
+        <OrderForm />
           <S3Upload />
         </Col>
       </Row>

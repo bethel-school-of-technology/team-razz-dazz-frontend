@@ -14,22 +14,17 @@ const HomeTitle = () => {
               Beautifully designed, carefully crafted custom cookies so good, they'd make your grandma weep with jealousy!
             </h5>
 
-            <MDBBtn id="homebutton1" className="btn btn-outline-light btn-lg m-2">
+            <MDBBtn id="homebutton1" className="btn btn-outline-light btn-lg m-2" href="/login">
               Already A Noble Cookie Addict? Click to Login
             </MDBBtn>
 
-            <MDBBtn id="homebutton2" className="btn btn-outline-light btn-lg m-2">
+            <MDBBtn id="homebutton2" className="btn btn-outline-light btn-lg m-2" href="/signup">
               New to The Noble Cookie Experience? Sign Up Here!
             </MDBBtn>
           </div>
         </div>
       </div>
     </div>
-    // <div>
-    //   <h1>Home stuffssss goes here</h1>
-    //   <MDBBtn gradient="blue">Already A Noble Cookie Addict? Click to Login</MDBBtn>
-    //   <MDBBtn gradient="peach">New to The Noble Cookie Experience? Sign Up Here!</MDBBtn>
-    // </div>
   );
 };
 
