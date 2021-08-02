@@ -3,16 +3,19 @@ import axios from 'axios';
 
 const UserProfile = () => {
   const [profile, setProfile] = useState([]);
+  
 
   const token = localStorage.getItem("myJWT");
-  console.log('PROFILE local storage', token)
+
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/user/profile').then(result => {
-      console.log(result.data);
-      console.log(result);
-      setProfile(result.data);
-    })
+    axios
+      .get("http://localhost:3000/api/user/profile", {
+        headers: { Authorization: localStorage.getItem(token) },
+      })
+      .then((result) => {
+        setProfile(result.data);
+      });
   }, [token]);
 
   console.log(profile)

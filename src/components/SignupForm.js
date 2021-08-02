@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { MDBBtn } from "mdb-react-ui-kit";
 import { useHistory } from 'react-router-dom';
+import "../components/SignupForm.css";
 
 
 const SignupForm = () => {
@@ -76,10 +77,16 @@ const SignupForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <br/>
-        <Button onSubmit={signUp} variant="primary" type="submit">
-          Submit
-        </Button>
+        <br />
+        <div align="center">
+          <MDBBtn
+            onSubmit={signUp}
+            id="signupbutton"
+            className="btn btn-outline-light btn-lg m-2"
+          >
+            Signup
+          </MDBBtn>
+        </div>
       </Form>
     </div>
   );

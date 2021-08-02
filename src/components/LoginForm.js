@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { MDBBtn } from "mdb-react-ui-kit";
 import { withRouter } from 'react-router';
+import "../components/LoginForm.css";
 
 const LoginForm = ({history}) => {
   const [username, setUsername] = useState("");
@@ -54,9 +55,11 @@ const LoginForm = ({history}) => {
         />
       </Form.Group>
       <br />
-      <Button onSubmit={signIn} variant="primary" type="submit">
-        Submit
-      </Button>
+      <div align="center">
+      <MDBBtn onSubmit={signIn} id="loginbutton" className="btn btn-outline-light btn-lg m-2">
+        Login
+      </MDBBtn>
+      </div>
     </Form>
   );
 };
