@@ -1,25 +1,22 @@
-import { useEffect, useState } from "react";
-import axios from 'axios';
+import { useEffect } from "react";
+import axios from "axios";
 
 const UserProfile = () => {
-  const [profile, setProfile] = useState([]);
-  
-
-  const token = localStorage.getItem("myJWT");
-
-
   useEffect(() => {
+    const token = localStorage.getItem("myJWT");
+
+    const options = {
+      headers: {
+        Authorization: `Bearer ${token}`
+      },
+    };
+
     axios
-      .get("http://localhost:3000/api/user/profile", {
-        headers: { Authorization: localStorage.getItem(token) },
-      })
+      .get("http://localhost:3000/api/user/profile", options)
       .then((result) => {
-        setProfile(result.data);
+        console.log(result.data);
       });
-  }, [token]);
-
-  console.log(profile)
-
+  }, []);
 
   return (
     <div className="App container py-3">

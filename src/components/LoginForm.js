@@ -8,7 +8,7 @@ import "../components/LoginForm.css";
 const LoginForm = ({history}) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [jwtToken, setJwtToken] = useState("");
+
 
   const signIn = (event) => {
     event.preventDefault();
@@ -20,20 +20,12 @@ const LoginForm = ({history}) => {
       };
 
       axios.post("http://localhost:3000/api/user/login", req).then((result) => {
-        setJwtToken(result.data.token);
-        if (jwtToken) {
-          localStorage.setItem("myJWT", jwtToken);
-        }
-        console.log(result.data);
+        const token = result.data.jwt
+        localStorage.setItem("myJWT", token);
+        history.push("/profile")
       });
     }
   };
-
-  console.log("MY TOKEN", localStorage.getItem("myJWT"));
-
-   if (jwtToken) {
-     history.push("/profile");
-   }
 
   return (
     <Form onSubmit={signIn}>
