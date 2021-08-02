@@ -11,10 +11,18 @@ import {
   MDBCollapse,
 } from "mdb-react-ui-kit";
 import "./Navigationbar.css";
+import { useHistory } from "react-router-dom";
 import Cookie from "../assets/cookielogo.png";
 
 const Navigationbar = () => {
   const [showNavText, setShowNavText] = useState(false);
+  const history = useHistory();
+
+  const LogOut = () => {
+    localStorage.removeItem("myJWT");
+    sessionStorage.removeItem("myJWT");
+    history.push("/login");
+  };
 
   return (
     <MDBNavbar expand="lg" light bgColor="light">
@@ -47,6 +55,14 @@ const Navigationbar = () => {
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBNavbarLink href="/signup">Signup</MDBNavbarLink>
+            </MDBNavbarItem>
+            {/* <MDBNavbarItem>
+              <MDBNavbarLink href="/admin">Admin</MDBNavbarLink>
+            </MDBNavbarItem> */}
+            <MDBNavbarItem>
+              <MDBNavbarLink href="/login" onClick={LogOut}>
+                Log out
+              </MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>

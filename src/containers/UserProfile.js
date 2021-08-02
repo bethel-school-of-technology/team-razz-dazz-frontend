@@ -1,31 +1,59 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import React from "react";
+import {
+  MDBCard,
+  MDBCardHeader,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardFooter,
+  MDBRow,
+  MDBCol
+} from "mdb-react-ui-kit";
+import "./UserProfile.css";
 
 const UserProfile = () => {
-  useEffect(() => {
-    const token = localStorage.getItem("myJWT");
+  const [profile, setProfile] = useState([]);
 
-    const options = {
-      headers: {
-        Authorization: `Bearer ${token}`
-      },
-    };
+  const token =  localStorage.getItem("myJWT");
 
+ useEffect(() => {
     axios
-      .get("http://localhost:3000/api/user/profile", options)
+      .get("http://localhost:3000/api/user/profile", {
+        headers: {
+          Authorization: token
+        },
+      })
       .then((result) => {
-        console.log(result.data);
+        setProfile(result.data.currentUser);
       });
-  }, []);
+  }, [token]);
+
+  console.log(profile.firstName);
 
   return (
-    <div className="App container py-3">
-      <h1 align="center">Insert Profile/Orders Info</h1>
-      {/* <ul>
-        { profile.map(profile => 
-          <li key={profile._id}>{profile.firstName}</li>
-        )}
-      </ul> */}
+    <div className="App container py-3" id="profilecontainer">
+      <MDBCard alignment="center">
+        <MDBCardHeader id="userheader">
+          {profile.firstName} {profile.lastName}
+        </MDBCardHeader>
+        <MDBRow>
+          <MDBCol>
+            <MDBCardBody>
+              <MDBCardTitle>Email</MDBCardTitle>
+              <MDBCardTitle>Username</MDBCardTitle>
+            </MDBCardBody>
+          </MDBCol>
+          <MDBCol>
+            <MDBCardBody>
+              <MDBCardText>{profile.email}</MDBCardText>
+              <MDBCardText>{profile.username}</MDBCardText>
+            </MDBCardBody>
+          </MDBCol>
+        </MDBRow>
+        <MDBCardFooter>Orders</MDBCardFooter>
+      </MDBCard>
     </div>
   );
 };
