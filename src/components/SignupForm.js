@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
-import { MDBBtn } from "mdb-react-ui-kit";
+import { MDBBtn, MDBRow, MDBCol, MDBInput, MDBCard, MDBCardBody } from "mdb-react-ui-kit";
 import { useHistory } from 'react-router-dom';
 import "../components/SignupForm.css";
 
@@ -39,56 +39,83 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="App container py-3">
-      <Form onSubmit={signUp}>
-        <Form.Group controlId="firstName" size="lg">
-          <Form.Label>First Name</Form.Label>
-          <Form.Control
-            type="text"
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group controlId="lastName" size="lg">
-          <Form.Label>Last Name</Form.Label>
-          <Form.Control
-            type="text"
-            onChange={(e) => setLastName(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group controlId="email" size="lg">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            autoFocus
-            type="email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group controlId="username" size="lg">
-          <Form.Label>Username</Form.Label>
-          <Form.Control
-            type="text"
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group controlId="password" size="lg">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
+    <MDBCard style={{ backgroundColor: "lightseagreen" }}>
+      <MDBCardBody>
+        <h1
+          align="center"
+          style={{ fontFamily: "Montserrat", color: "white", fontSize: "24px" }}
+        >
+          SIGN UP TO PLACE AN ORDER!
+        </h1>
         <br />
-        <div align="center">
+        <Form onSubmit={signUp} align="center">
+          <MDBRow>
+            <MDBCol>
+              <MDBInput
+                label="First Name"
+                id="form1"
+                type="text"
+                style={{ color: "white" }}
+                onChange={(e) => setFirstName(e.target.value)}
+              />
+            </MDBCol>
+            <MDBCol>
+              <MDBInput
+                label="Last Name"
+                id="form1"
+                type="text"
+                style={{ color: "white" }}
+                onChange={(e) => setLastName(e.target.value)}
+              />
+            </MDBCol>
+          </MDBRow>
+          <br />
+          <MDBRow>
+            <MDBCol>
+              <MDBInput
+                label="Email"
+                id="form1"
+                type="text"
+                style={{ color: "white" }}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </MDBCol>
+          </MDBRow>
+          <br />
+          <MDBRow>
+            <MDBCol>
+              <MDBInput
+                label="Username"
+                id="form1"
+                type="text"
+                style={{ color: "white" }}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </MDBCol>
+          </MDBRow>
+          <br />
+          <MDBRow>
+            <MDBCol>
+              <MDBInput
+                label="Password"
+                id="form1"
+                type="password"
+                style={{ color: "white" }}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </MDBCol>
+          </MDBRow>
+          <br />
           <MDBBtn
             onSubmit={signUp}
             id="signupbutton"
             className="btn btn-outline-light btn-lg m-2"
           >
-            Signup
+            Submit
           </MDBBtn>
-        </div>
-      </Form>
-    </div>
+        </Form>
+      </MDBCardBody>
+    </MDBCard>
   );
 };
 
