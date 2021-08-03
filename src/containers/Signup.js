@@ -5,10 +5,9 @@ import Col from "react-bootstrap/Col";
 
 const Signup = () => {
   return (
-    <div className="App container py-3">
-      <h1 align="center">Insert Signup banner</h1>
+    <div className="App container py-3 pt-5 pb-5">
       <Row className="justify-content-center">
-        <Col md="4">
+        <Col md="5">
           <SignupForm/>
         </Col>
       </Row>

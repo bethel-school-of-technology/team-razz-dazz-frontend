@@ -1,3 +1,7 @@
 #signupbutton {
     background-color: rgb(252, 171, 184);
 }
+
+#signupbutton:hover {
+    background-color: rgba(252, 171, 185, 0);
+}

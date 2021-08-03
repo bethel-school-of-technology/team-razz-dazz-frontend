@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
-import { MDBBtn } from "mdb-react-ui-kit";
 import { withRouter } from 'react-router';
 import "../components/LoginForm.css";
+import {
+  MDBBtn,
+  MDBRow,
+  MDBCol,
+  MDBInput,
+  MDBCard,
+  MDBCardBody,
+} from "mdb-react-ui-kit";
 
 
 const LoginForm = ({ history }) => {
@@ -27,37 +34,50 @@ const LoginForm = ({ history }) => {
 
 
   return (
-    <div className="App container py-3">
-      <Form onSubmit={signIn}>
-        <Form.Group className="mb-3" controlId="formBasicUsername">
-          <Form.Label>Username</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Username"
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
-        <br />
-        <div align="center">
+    <MDBCard style={{ backgroundColor: "lightseagreen" }}>
+      <MDBCardBody>
+        <h1
+          align="center"
+          style={{ fontFamily: "Montserrat", color: "white", fontSize: "24px" }}
+        >
+          Log In!
+        </h1>
+        <Form onSubmit={signIn} align="center">
+          <br />
+          <MDBRow>
+            <MDBCol>
+              <MDBInput
+                label="Username"
+                id="form1"
+                type="text"
+                style={{ color: "white" }}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </MDBCol>
+          </MDBRow>
+          <br />
+          <MDBRow>
+            <MDBCol>
+              <MDBInput
+                label="Password"
+                id="form1"
+                type="password"
+                style={{ color: "white" }}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </MDBCol>
+          </MDBRow>
+          <br />
           <MDBBtn
             onSubmit={signIn}
-            id="loginbutton"
+            id="signupbutton"
             className="btn btn-outline-light btn-lg m-2"
           >
-            Login
+            Submit
           </MDBBtn>
-        </div>
-      </Form>
-    </div>
+        </Form>
+      </MDBCardBody>
+    </MDBCard>
   );
 };
 

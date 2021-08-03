@@ -8,7 +8,7 @@ import GalleryPage from "./containers/GalleryPage";
 import OrderPage from "./containers/OrderPage";
 import Footer from "./components/Footer";
 import UserProfile from "./containers/UserProfile";
-import AdminView from "./containers/AdminView";
+// import AdminView from "./containers/AdminView";
 
 export default function App() {
   return (
@@ -18,9 +18,7 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/admin">
-            <AdminView />
-          </Route>
+          
           <Route path="/profile">
             <UserProfile />
           </Route>
