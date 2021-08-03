@@ -9,7 +9,7 @@ const OrderPage = () => {
     <div className="App container py-3">
       <h1 align="center">Insert Order Form</h1>
       <Row className="justify-content-center">
-        <Col md="4">
+        <Col md="6">
         <OrderForm />
           <S3Upload />
         </Col>

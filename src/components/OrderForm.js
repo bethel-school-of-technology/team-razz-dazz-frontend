@@ -4,6 +4,12 @@ import Form from "react-bootstrap/Form";
 import { MDBBtn } from "mdb-react-ui-kit";
 import { useHistory } from "react-router-dom";
 import "../components/SignupForm.css";
+import {
+  MDBInput,
+  MDBCol,
+  MDBRow
+} from "mdb-react-ui-kit";
+import "../components/OrderForm.css";
 
 const OrderForm = () => {
   const [firstName, setFirstName] = useState("");
@@ -51,61 +57,75 @@ const OrderForm = () => {
   };
 
   return (
-    <div className="App container py-3">
-      <Form onSubmit={Order}>
-        <Form.Group controlId="firstName" size="lg">
-          <Form.Label>First Name</Form.Label>
-          <Form.Control
-            type="text"
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group controlId="lastName" size="lg">
-          <Form.Label>Last Name</Form.Label>
-          <Form.Control
-            type="text"
-            onChange={(e) => setLastName(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group controlId="email" size="lg">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            autoFocus
-            type="email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group controlId="phonenumber" size="lg">
-          <Form.Label>Phone Number</Form.Label>
-          <Form.Control
-            type="text"
-            onChange={(e) => setPhoneNumber(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group controlId="address" size="lg">
-          <Form.Label>Address</Form.Label>
-          <Form.Control
-            type="text"
-            onChange={(e) => setAddress(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group controlId="ordersummary" size="lg">
-          <Form.Label>Order Summary</Form.Label>
-          <Form.Control
-            type="text"
-            onChange={(e) => setOrderSummary(e.target.value)}
-          />
-        </Form.Group>
+    <div className="">
+      <Form onSubmit={Order} align="center">
+        <MDBRow>
+          <MDBCol>
+            <MDBInput
+              label="First Name"
+              id="form1"
+              type="text"
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+          </MDBCol>
+          <MDBCol>
+            <MDBInput
+              label="Last Name"
+              id="form1"
+              type="text"
+              onChange={(e) => setLastName(e.target.value)}
+            />
+          </MDBCol>
+        </MDBRow>
         <br />
-        <div align="center">
-          <MDBBtn
-            onSubmit={Order}
-            id="signupbutton"
-            className="btn btn-outline-light btn-lg m-2"
-          >
-            Order
-          </MDBBtn>
-        </div>
+        <MDBRow>
+          <MDBCol>
+            <MDBInput
+              label="Email"
+              id="form1"
+              type="text"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </MDBCol>
+          <MDBCol>
+            <MDBInput
+              label="Mobile"
+              id="form1"
+              type="text"
+              onChange={(e) => setPhoneNumber(e.target.value)}
+            />
+          </MDBCol>
+        </MDBRow>
+        <br />
+        <MDBRow>
+          <MDBCol>
+            <MDBInput
+              label="Address"
+              id="form1"
+              type="text"
+              onChange={(e) => setAddress(e.target.value)}
+            />
+          </MDBCol>
+        </MDBRow>
+        <br />
+        <MDBRow>
+          <MDBCol>
+            <MDBInput
+              label="Whatcha having?"
+              id="textAreaExample"
+              textarea
+              rows={4}
+              onChange={(e) => setOrderSummary(e.target.value)}
+            />
+          </MDBCol>
+        </MDBRow>
+        <MDBBtn
+          onSubmit={Order}
+          id="loginbutton"
+          className="btn btn-outline-light btn-lg m-2"
+        >
+          Submit
+        </MDBBtn>
       </Form>
     </div>
   );
