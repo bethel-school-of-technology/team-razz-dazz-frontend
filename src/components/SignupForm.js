@@ -39,7 +39,7 @@ const SignupForm = () => {
   };
 
   return (
-    <MDBCard style={{ backgroundColor: "lightseagreen" }}>
+    <MDBCard style={{ backgroundColor: "rgb(252, 171, 184)" }}>
       <MDBCardBody>
         <h1
           align="center"
