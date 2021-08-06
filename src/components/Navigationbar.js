@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   MDBNavbar,
   MDBContainer,
@@ -13,63 +13,102 @@ import {
 import "./Navigationbar.css";
 import { useHistory } from "react-router-dom";
 import Cookie from "../assets/cookielogo.png";
-
 const Navigationbar = () => {
-  const [showNavText, setShowNavText] = useState(false);
+  const [isAuthenticating, setIsAuthenticating] = useState(true);
+  const [isAuthenticated, userHasAuthenticated] = useState(false);
+  const token = localStorage.getItem("myJWT"); 
   const history = useHistory();
 
-  const LogOut = () => {
+  async function onLoad() {
+    if (token && token !== undefined && token !== "") {
+      userHasAuthenticated(true);
+    } else {
+      console.log("No Current User")
+    }
+    setIsAuthenticating(false);
+  }
+
+  useEffect(() => {
+    onLoad();
+  }, [isAuthenticated]);
+
+  async function handleLogout() {
     localStorage.removeItem("myJWT");
     sessionStorage.removeItem("myJWT");
+    userHasAuthenticated(false);
     history.push("/login");
-  };
+  }
 
   return (
-    <MDBNavbar expand="lg" light bgColor="light">
-      <MDBContainer fluid>
-        <MDBNavbarBrand href="/">
-          <img src={Cookie} alt="cookie" id="cookie" href="/" />
-        </MDBNavbarBrand>
-        <MDBNavbarToggler
-          type="button"
-          data-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          onClick={() => setShowNavText(!showNavText)}
-        >
-          <MDBIcon icon="bars" fas />
-        </MDBNavbarToggler>
-        <MDBCollapse navbar show={showNavText}>
-          <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
-            <MDBNavbarItem>
-              <MDBNavbarLink href="/gallery">
-                Gallery
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink href="/orderpage">Order Now</MDBNavbarLink>
-            </MDBNavbarItem>
-            {/* <MDBNavbarItem>
+    !isAuthenticating && (
+      <MDBNavbar expand="lg" style={{ backgroundColor: "lightseagreen" }}>
+        <MDBContainer fluid>
+          <MDBNavbarBrand href="/">
+            <img src={Cookie} alt="cookie" id="cookie" href="/" />
+          </MDBNavbarBrand>
+          <MDBNavbarToggler
+            type="button"
+            data-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            // onClick={() => setShowNavText(!showNavText)}
+          >
+            <MDBIcon icon="bars" fas />
+          </MDBNavbarToggler>
+          <MDBCollapse navbar>
+            <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
+              <MDBNavbarItem>
+                <MDBNavbarLink href="/gallery" style={{ color: "white" }}>
+                  Gallery
+                </MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink href="/contactpage" style={{ color: "white" }}>
+                  Contact Us
+                </MDBNavbarLink>
+              </MDBNavbarItem>
+              {/* <MDBNavbarItem>
               <MDBNavbarLink href="/admin">Admin</MDBNavbarLink>
             </MDBNavbarItem> */}
-          </MDBNavbarNav>
-          <MDBNavbarNav className="justify-content-end">
-            <MDBNavbarItem>
-              <MDBNavbarLink href="/signup">Signup</MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink href="/login">Login</MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink href="/login" onClick={LogOut}>
-                Log out
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-          </MDBNavbarNav>
-        </MDBCollapse>
-      </MDBContainer>
-    </MDBNavbar>
+            </MDBNavbarNav>
+            <MDBNavbarNav className="justify-content-end">
+              {!isAuthenticated ? (
+                <>
+                  <MDBNavbarItem>
+                    <MDBNavbarLink href="/signup" style={{ color: "white" }}>
+                      Signup
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+                  <MDBNavbarItem>
+                    <MDBNavbarLink href="/login" style={{ color: "white" }}>
+                      Login
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+                </>
+              ) : (
+                <>
+                  <MDBNavbarItem>
+                    <MDBNavbarLink
+                      href="/login"
+                      onClick={handleLogout}
+                      style={{ color: "white" }}
+                    >
+                      Log out
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+                  <MDBNavbarItem>
+                    <MDBNavbarLink href="/orderpage" style={{ color: "white" }}>
+                      Order Now
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+                </>
+              )}
+            </MDBNavbarNav>
+          </MDBCollapse>
+        </MDBContainer>
+      </MDBNavbar>
+    )
   );
 }
 

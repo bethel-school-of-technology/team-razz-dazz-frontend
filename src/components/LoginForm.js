@@ -25,16 +25,22 @@ const LoginForm = ({ history }) => {
         password,
       };
       axios.post("http://localhost:3000/api/user/login", req).then((result) => {
+        console.log(result)
+        if(result) {
         const token = result.data.token;
         localStorage.setItem('myJWT', token);
         history.push('/profile');
+        window.location.reload();
+        } else {
+          window.location.reload();
+        }
       });
     }
   };
 
 
   return (
-    <MDBCard style={{ backgroundColor: "lightseagreen" }}>
+    <MDBCard style={{ backgroundColor: "rgb(252, 171, 184)" }}>
       <MDBCardBody>
         <h1
           align="center"
