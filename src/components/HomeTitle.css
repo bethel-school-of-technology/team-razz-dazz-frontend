@@ -15,14 +15,14 @@
   background-color: hotpink;
   font-size: x-small;
   font-weight: bolder;
-  color:lightseagreen;
+  color:rgb(255, 255, 255);
 }
 
 #homebutton2 {
   background-color: lightseagreen;
   font-size: x-small;
   font-weight: bolder;
-  color: hotpink;
+  color: rgb(255, 255, 255)
 }
 
 #homebutton1:hover {
@@ -39,7 +39,7 @@ h1 {
   font-family: 'Baskerville Old Face';
   font-size: 75em;
   font-weight: bolder;
-  color: hotpink;
+  color: rgb(255, 255, 255);
   outline-color: indigo;
 }
 
