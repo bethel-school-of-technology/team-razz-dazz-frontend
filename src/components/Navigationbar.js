@@ -11,13 +11,14 @@ import {
   MDBCollapse,
 } from "mdb-react-ui-kit";
 import "./Navigationbar.css";
-import { useHistory } from "react-router-dom";
 import Cookie from "../assets/cookielogo.png";
-const Navigationbar = () => {
+
+
+const Navigationbar = ({history}) => {
   const [isAuthenticating, setIsAuthenticating] = useState(true);
   const [isAuthenticated, userHasAuthenticated] = useState(false);
   const token = localStorage.getItem("myJWT"); 
-  const history = useHistory();
+
 
   
   
