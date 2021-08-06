@@ -19,18 +19,21 @@ const Navigationbar = () => {
   const token = localStorage.getItem("myJWT"); 
   const history = useHistory();
 
-  async function onLoad() {
-    if (token && token !== undefined && token !== "") {
-      userHasAuthenticated(true);
-    } else {
-      console.log("No Current User")
-    }
-    setIsAuthenticating(false);
-  }
-
+  
+  
   useEffect(() => {
+    async function onLoad() {
+      if (token && token !== undefined && token !== "") {
+        userHasAuthenticated(true);
+      } else {
+        console.log("No Current User");
+      }
+      setIsAuthenticating(false);
+    }
+
     onLoad();
-  }, [isAuthenticated]);
+  }, [token]);
+  
 
   async function handleLogout() {
     localStorage.removeItem("myJWT");
