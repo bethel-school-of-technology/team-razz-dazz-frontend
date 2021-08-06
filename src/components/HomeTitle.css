@@ -35,15 +35,14 @@
   font-size: x-small;
 }
 
-h1 {
+#hometitle1 {
   font-family: 'Baskerville Old Face';
-  font-size: 75em;
   font-weight: bolder;
   color: rgb(255, 255, 255);
   outline-color: indigo;
 }
 
-h5 {
+#hometitle5 {
     font-family: 'Lucinda Calligraphy';
     font-size: medium;
 }
