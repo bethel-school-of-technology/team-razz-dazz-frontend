@@ -2,17 +2,15 @@ import React, { useState } from "react";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
 import { MDBBtn, MDBRow, MDBCol, MDBInput, MDBCard, MDBCardBody } from "mdb-react-ui-kit";
-import { useHistory } from 'react-router-dom';
 import "../components/SignupForm.css";
 
 
-const SignupForm = () => {
+const SignupForm = ({history}) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const history = useHistory();
 
 
   const signUp = (event) => {

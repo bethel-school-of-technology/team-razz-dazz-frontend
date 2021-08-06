@@ -2,19 +2,17 @@ import React, { useState } from "react";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
 import { MDBBtn } from "mdb-react-ui-kit";
-import { useHistory } from "react-router-dom";
 import "../components/SignupForm.css";
 import { MDBInput, MDBCol, MDBRow } from "mdb-react-ui-kit";
 import "../components/OrderForm.css";
 
-const ContactForm = (props) => {
+const ContactForm = (props, {history}) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [address, setAddress] = useState("");
   const [orderSummary, setOrderSummary] = useState("");
-  const history = useHistory();
 
   const Contact = (event) => {
     event.preventDefault();
