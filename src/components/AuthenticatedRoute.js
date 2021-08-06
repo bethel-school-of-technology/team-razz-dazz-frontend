@@ -1,6 +1,6 @@
 import { Redirect, Route } from 'react-router';
 
-const AuthenticatedRoute = ({ component: Component, ...rest }) => {
+const AuthenticatedRoute = ({ container: Container, ...rest }) => {
 
     const token = localStorage.getItem('myJWT');
     const isLoggedIn = !! token;
@@ -11,7 +11,7 @@ const AuthenticatedRoute = ({ component: Component, ...rest }) => {
         render = { (props) => {
             props.token = token;
             return isLoggedIn ? (
-                <Component {...props} />
+                <Container {...props} />
             ) : (
                 <Redirect to={{
                     pathname: "/login",
