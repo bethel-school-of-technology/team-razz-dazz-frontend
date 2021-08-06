@@ -7,7 +7,8 @@ import OrderForm from "../components/OrderForm";
 const OrderPage = () => {
   return (
     <div className="App container py-3">
-      <h1 align="center">Insert Order Form</h1>
+      <h1 align="center">Place an order below! :)</h1>
+      <br/>
       <Row className="justify-content-center">
         <Col md="6">
         <OrderForm />

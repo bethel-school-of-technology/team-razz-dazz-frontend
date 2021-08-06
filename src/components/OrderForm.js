@@ -11,7 +11,7 @@ import {
 } from "mdb-react-ui-kit";
 import "../components/OrderForm.css";
 
-const OrderForm = () => {
+const OrderForm = (props) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -51,8 +51,15 @@ const OrderForm = () => {
         })
         .then((result) => {
           console.log(result.data);
-          history.push("/ordersubmit");
+          history.push("/ordersubmission");
         });
+      
+      axios
+        .post("http://localhost:3000/api/order/send", req)
+        .then((result) => {
+          console.log(result.data);
+        });
+      
     }
   };
 

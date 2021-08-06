@@ -43,22 +43,24 @@ const Navigationbar = () => {
         <MDBCollapse navbar show={showNavText}>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current="page" href="/gallery">
+              <MDBNavbarLink href="/gallery">
                 Gallery
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBNavbarLink href="/orderpage">Order Now</MDBNavbarLink>
             </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink href="/login">Login</MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink href="/signup">Signup</MDBNavbarLink>
-            </MDBNavbarItem>
             {/* <MDBNavbarItem>
               <MDBNavbarLink href="/admin">Admin</MDBNavbarLink>
             </MDBNavbarItem> */}
+          </MDBNavbarNav>
+          <MDBNavbarNav className="justify-content-end">
+            <MDBNavbarItem>
+              <MDBNavbarLink href="/signup">Signup</MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href="/login">Login</MDBNavbarLink>
+            </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBNavbarLink href="/login" onClick={LogOut}>
                 Log out

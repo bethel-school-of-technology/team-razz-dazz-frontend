@@ -9,6 +9,8 @@ import OrderPage from "./containers/OrderPage";
 import Footer from "./components/Footer";
 import UserProfile from "./containers/UserProfile";
 // import AdminView from "./containers/AdminView";
+import OrderSubmission from "./containers/OrderSubmission";
+import AuthenticatedRoute from "./components/AuthenticatedRoute";
 
 export default function App() {
   return (
@@ -18,13 +20,15 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          
-          <Route path="/profile">
+          <AuthenticatedRoute path="/ordersubmission" component={OrderSubmission}>
+            <OrderSubmission />
+          </AuthenticatedRoute>
+          <AuthenticatedRoute path="/profile" component={UserProfile}>
             <UserProfile />
-          </Route>
-          <Route path="/orderpage">
+          </AuthenticatedRoute>
+          <AuthenticatedRoute path="/orderpage" component={OrderPage}>
             <OrderPage />
-          </Route>
+          </AuthenticatedRoute>
           <Route path="/gallery">
             <GalleryPage />
           </Route>
