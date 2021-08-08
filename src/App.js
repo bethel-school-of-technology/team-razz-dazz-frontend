@@ -49,7 +49,7 @@ export default function App() {
           <Route path="/">
             <Home />
           </Route>
-          )}
+          )
         </Switch>
         <Footer />
       </div>
