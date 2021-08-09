@@ -18,6 +18,7 @@ const Navigationbar = ({history}) => {
   const [isAuthenticating, setIsAuthenticating] = useState(true);
   const [isAuthenticated, userHasAuthenticated] = useState(false);
   const token = localStorage.getItem("myJWT"); 
+  const [showNavText, setShowNavText] = useState(false);
 
 
   
@@ -56,11 +57,11 @@ const Navigationbar = ({history}) => {
             aria-controls="navbarText"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            // onClick={() => setShowNavText(!showNavText)}
+            onClick={() => setShowNavText(!showNavText)}
           >
             <MDBIcon icon="bars" fas />
           </MDBNavbarToggler>
-          <MDBCollapse navbar>
+          <MDBCollapse navbar show={showNavText}>
             <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
               <MDBNavbarItem>
                 <MDBNavbarLink href="/gallery" style={{ color: "white" }}>
