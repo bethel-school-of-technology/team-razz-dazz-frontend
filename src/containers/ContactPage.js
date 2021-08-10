@@ -9,7 +9,7 @@ const ContactPage = () => {
       <h1 align="center">Give us a holler!</h1>
       <br />
       <Row className="justify-content-center">
-        <Col md="6">
+        <Col md="8">
         <ContactForm/>
         </Col>
       </Row>

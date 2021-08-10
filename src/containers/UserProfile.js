@@ -34,26 +34,28 @@ const UserProfile = () => {
 
   return (
     <div className="App container py-3" id="profilecontainer">
-      <MDBCard alignment="center">
-        <MDBCardHeader id="userheader">
-          {profile.firstName} {profile.lastName}
-        </MDBCardHeader>
-        <MDBRow>
-          <MDBCol>
-            <MDBCardBody>
-              <MDBCardTitle>Email</MDBCardTitle>
-              <MDBCardTitle>Username</MDBCardTitle>
-            </MDBCardBody>
-          </MDBCol>
-          <MDBCol>
-            <MDBCardBody>
-              <MDBCardText>{profile.email}</MDBCardText>
-              <MDBCardText>{profile.username}</MDBCardText>
-            </MDBCardBody>
-          </MDBCol>
-        </MDBRow>
-        <MDBCardFooter>Orders</MDBCardFooter>
-      </MDBCard>
+      <MDBCol md="12">
+        <MDBCard alignment="center">
+          <MDBCardHeader id="userheader">
+            {profile.firstName} {profile.lastName}
+          </MDBCardHeader>
+          <MDBRow>
+            <MDBCol>
+              <MDBCardBody>
+                <MDBCardTitle>Email</MDBCardTitle>
+                <MDBCardTitle>Username</MDBCardTitle>
+              </MDBCardBody>
+            </MDBCol>
+            <MDBCol>
+              <MDBCardBody>
+                <MDBCardText>{profile.email}</MDBCardText>
+                <MDBCardText>{profile.username}</MDBCardText>
+              </MDBCardBody>
+            </MDBCol>
+          </MDBRow>
+          <MDBCardFooter>Orders</MDBCardFooter>
+        </MDBCard>
+      </MDBCol>
     </div>
   );
 };
