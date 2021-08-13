@@ -8,7 +8,7 @@ const Login = () => {
     <div className="App container py-3 pt-5 pb-5">
       <Row className="justify-content-center"></Row>
       <Row className="justify-content-center">
-        <Col md="4">
+        <Col md="8">
           <LoginForm />
         </Col>
       </Row>

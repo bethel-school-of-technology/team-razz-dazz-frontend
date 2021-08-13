@@ -10,7 +10,7 @@ const OrderPage = () => {
       <h1 align="center">Place an order below! :)</h1>
       <br/>
       <Row className="justify-content-center">
-        <Col md="6">
+        <Col md="8">
         <OrderForm />
           <S3Upload />
         </Col>
