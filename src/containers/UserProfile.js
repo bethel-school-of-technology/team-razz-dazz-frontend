@@ -9,28 +9,42 @@ import {
   MDBCardText,
   MDBCardFooter,
   MDBRow,
-  MDBCol
+  MDBCol,
 } from "mdb-react-ui-kit";
 import "./UserProfile.css";
 
 const UserProfile = () => {
   const [profile, setProfile] = useState([]);
+  const [order, setOrder] = useState([]);
 
-  const token =  localStorage.getItem("myJWT");
+  const token = localStorage.getItem("myJWT");
 
- useEffect(() => {
+  useEffect(() => {
     axios
       .get("http://localhost:3000/api/user/profile", {
         headers: {
-          Authorization: token
+          Authorization: token,
         },
       })
       .then((result) => {
         setProfile(result.data.currentUser);
       });
+
+    axios
+      .get("http://localhost:3000/api/order/usersubmission", {
+        headers: {
+          Authorization: token,
+        },
+      })
+      .then((result) => {
+       result.data.bakedGoods.map((o) => {
+         return setOrder(o)
+       })
+      });
   }, [token]);
 
   console.log(profile.firstName);
+  console.log(order.address);
 
   return (
     <div className="App container py-3" id="profilecontainer">
@@ -54,6 +68,7 @@ const UserProfile = () => {
             </MDBCol>
           </MDBRow>
           <MDBCardFooter>Orders</MDBCardFooter>
+          <MDBCardText>{order.address}<br/>{order.orderSummary}</MDBCardText>
         </MDBCard>
       </MDBCol>
     </div>

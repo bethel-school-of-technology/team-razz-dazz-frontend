@@ -49,7 +49,7 @@ const OrderForm = (props, {history}) => {
         })
         .then((result) => {
           console.log(result.data);
-          history.push("/ordersubmission");
+          history.push("/");
         });
       
       axios
@@ -86,7 +86,7 @@ const OrderForm = (props, {history}) => {
         <MDBRow>
           <MDBCol>
             <MDBInput
-              label="Email"
+              label="Account Email"
               id="form1"
               type="text"
               onChange={(e) => setEmail(e.target.value)}
