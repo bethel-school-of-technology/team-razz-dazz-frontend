@@ -12,6 +12,8 @@ import UserProfile from "./containers/UserProfile";
 import OrderSubmission from "./containers/OrderSubmission";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import ContactPage from "./containers/ContactPage";
+import AdminOrders from "./components/AdminOrders";
+
 
 export default function App() {
 
@@ -22,6 +24,9 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+        <Route path="/adminorders">
+            <AdminOrders />
+          </Route>
           <AuthenticatedRoute
             path="/profile"
             component={UserProfile}
