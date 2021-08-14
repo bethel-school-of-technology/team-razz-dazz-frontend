@@ -28,7 +28,7 @@ const SignupForm = ({history}) => {
       
 
 
-      axios.post("http://localhost:3000/api/user/register", req).then((result) => {
+      axios.post("https://cookienoble.herokuapp.com/", req).then((result) => {
         const token = result.data.jwt;
         localStorage.setItem("myJWT", token);
         console.log(result.data);

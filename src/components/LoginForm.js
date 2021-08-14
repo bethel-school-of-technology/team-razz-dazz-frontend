@@ -22,13 +22,13 @@ const LoginForm = ({ history }) => {
         username,
         password,
       };
-      axios.post("http://localhost:3000/api/user/login", req).then((result) => {
-        console.log(result)
-        if(result) {
-        const token = result.data.token;
-        localStorage.setItem('myJWT', token);
-        history.push('/profile');
-        window.location.reload();
+      axios.post("https://cookienoble.herokuapp.com/", req).then((result) => {
+        console.log(result);
+        if (result) {
+          const token = result.data.token;
+          localStorage.setItem("myJWT", token);
+          history.push("/profile");
+          window.location.reload();
         } else {
           window.location.reload();
         }
