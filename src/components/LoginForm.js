@@ -7,9 +7,7 @@ import {
   MDBBtn,
   MDBRow,
   MDBCol,
-  MDBInput,
-  MDBCard,
-  MDBCardBody,
+  MDBInput
 } from "mdb-react-ui-kit";
 
 
@@ -40,14 +38,6 @@ const LoginForm = ({ history }) => {
 
 
   return (
-    <MDBCard style={{ backgroundColor: "rgb(252, 171, 184)" }}>
-      <MDBCardBody>
-        <h1
-          align="center"
-          style={{ fontFamily: "Montserrat", color: "white", fontSize: "24px" }}
-        >
-          Log In!
-        </h1>
         <Form onSubmit={signIn} align="center">
           <br />
           <MDBRow>
@@ -82,8 +72,6 @@ const LoginForm = ({ history }) => {
             Submit
           </MDBBtn>
         </Form>
-      </MDBCardBody>
-    </MDBCard>
   );
 };
 

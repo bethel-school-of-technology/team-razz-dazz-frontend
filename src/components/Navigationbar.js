@@ -94,17 +94,22 @@ const Navigationbar = ({history}) => {
               ) : (
                 <>
                   <MDBNavbarItem>
+                    <MDBNavbarLink href="/profile" style={{ color: "white" }}>
+                      My Profile
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+                  <MDBNavbarItem>
+                    <MDBNavbarLink href="/orderpage" style={{ color: "white" }}>
+                      Order Now
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+                  <MDBNavbarItem>
                     <MDBNavbarLink
                       href="/login"
                       onClick={handleLogout}
                       style={{ color: "white" }}
                     >
                       Log out
-                    </MDBNavbarLink>
-                  </MDBNavbarItem>
-                  <MDBNavbarItem>
-                    <MDBNavbarLink href="/orderpage" style={{ color: "white" }}>
-                      Order Now
                     </MDBNavbarLink>
                   </MDBNavbarItem>
                 </>

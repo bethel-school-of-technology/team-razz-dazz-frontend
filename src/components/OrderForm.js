@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
 import { MDBBtn } from "mdb-react-ui-kit";
+import { withRouter } from "react-router";
 import "../components/SignupForm.css";
 import {
   MDBInput,
@@ -10,7 +11,7 @@ import {
 } from "mdb-react-ui-kit";
 import "../components/OrderForm.css";
 
-const OrderForm = (props, {history}) => {
+const OrderForm = ({ history }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -49,7 +50,7 @@ const OrderForm = (props, {history}) => {
         })
         .then((result) => {
           console.log(result.data);
-          history.push("/");
+          history.push("/ordersubmission");
         });
       
       axios
@@ -136,4 +137,4 @@ const OrderForm = (props, {history}) => {
   );
 };
 
-export default OrderForm;
+export default withRouter(OrderForm);
