@@ -34,12 +34,10 @@ const ContactForm = (props, {history}) => {
         orderSummary,
       };
 
-      axios
-        .post("http://localhost:3000/api/order/contact", req)
-        .then((result) => {
-          console.log(result.data);
-          history.push("/home");
-        });
+      axios.post("https://cookienoble.herokuapp.com/", req).then((result) => {
+        console.log(result.data);
+        history.push("/home");
+      });
     }
   };
 

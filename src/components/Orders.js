@@ -19,7 +19,7 @@ const Orders = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/order/usersubmission", {
+      .get("https://cookienoble.herokuapp.com/", {
         headers: {
           Authorization: token,
         },

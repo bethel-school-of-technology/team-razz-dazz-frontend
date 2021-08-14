@@ -43,7 +43,7 @@ const OrderForm = ({ history }) => {
       const token = localStorage.getItem("myJWT");
 
       axios
-        .post("http://localhost:3000/api/order/ordersubmit", req, {
+        .post("https://cookienoble.herokuapp.com/", req, {
           headers: {
             Authorization: token,
           },
@@ -53,11 +53,9 @@ const OrderForm = ({ history }) => {
           history.push("/ordersubmission");
         });
       
-      axios
-        .post("http://localhost:3000/api/order/send", req)
-        .then((result) => {
-          console.log(result.data);
-        });
+      axios.post("https://cookienoble.herokuapp.com/", req).then((result) => {
+        console.log(result.data);
+      });
       
     }
   };
