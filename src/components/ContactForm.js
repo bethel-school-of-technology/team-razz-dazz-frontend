@@ -6,7 +6,7 @@ import "../components/SignupForm.css";
 import { MDBInput, MDBCol, MDBRow } from "mdb-react-ui-kit";
 import "../components/OrderForm.css";
 
-const ContactForm = (props, {history}) => {
+const ContactForm = (props, { history }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -34,10 +34,12 @@ const ContactForm = (props, {history}) => {
         orderSummary,
       };
 
-      axios.post("https://cookienoble.herokuapp.com/", req).then((result) => {
-        console.log(result.data);
-        history.push("/home");
-      });
+      axios
+        .post("http://localhost:3000/api/order/contact", req)
+        .then((result) => {
+          console.log(result.data);
+          history.push("/home");
+        });
     }
   };
 

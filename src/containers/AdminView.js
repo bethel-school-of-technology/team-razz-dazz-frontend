@@ -20,7 +20,7 @@ const AdminView = () => {
 
   useEffect(() => {
     axios
-      .get("https://cookienoble.herokuapp.com/", {
+      .get("http://localhost:3000/api/user/admin", {
         headers: {
           Authorization: token,
         },

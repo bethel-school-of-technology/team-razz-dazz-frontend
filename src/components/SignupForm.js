@@ -28,12 +28,14 @@ const SignupForm = ({history}) => {
       
 
 
-      axios.post("https://cookienoble.herokuapp.com/", req).then((result) => {
-        const token = result.data.jwt;
-        localStorage.setItem("myJWT", token);
-        console.log(result.data);
-        history.push("/login");
-      });
+      axios
+        .post("http://localhost:3000/api/user/register", req)
+        .then((result) => {
+          const token = result.data.jwt;
+          localStorage.setItem("myJWT", token);
+          console.log(result.data);
+          history.push("/login");
+        });
     }
   };
 
@@ -46,7 +48,7 @@ const SignupForm = ({history}) => {
                 label="First Name"
                 id="form1"
                 type="text"
-                style={{ color: "white" }}
+                style={{ color: "black" }}
                 onChange={(e) => setFirstName(e.target.value)}
               />
             </MDBCol>
@@ -55,7 +57,7 @@ const SignupForm = ({history}) => {
                 label="Last Name"
                 id="form1"
                 type="text"
-                style={{ color: "white" }}
+                style={{ color: "black" }}
                 onChange={(e) => setLastName(e.target.value)}
               />
             </MDBCol>
