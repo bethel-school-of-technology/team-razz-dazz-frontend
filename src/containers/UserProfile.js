@@ -21,7 +21,7 @@ const UserProfile = () => {
 
   useEffect(() => {
     axios
-      .get("https://cookienoble.herokuapp.com/", {
+      .get("http://localhost:3000/api/user/profile", {
         headers: {
           Authorization: token,
         },
