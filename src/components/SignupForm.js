@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
-import { MDBBtn, MDBRow, MDBCol, MDBInput, MDBCard, MDBCardBody } from "mdb-react-ui-kit";
+import { withRouter } from "react-router";
+import { MDBBtn, MDBRow, MDBCol, MDBInput } from "mdb-react-ui-kit";
 import "../components/SignupForm.css";
 
 
@@ -37,15 +38,7 @@ const SignupForm = ({history}) => {
   };
 
   return (
-    <MDBCard style={{ backgroundColor: "rgb(252, 171, 184)" }}>
-      <MDBCardBody>
-        <h1
-          align="center"
-          style={{ fontFamily: "Montserrat", color: "white", fontSize: "24px" }}
-        >
-          SIGN UP TO PLACE AN ORDER!
-        </h1>
-        <br />
+    
         <Form onSubmit={signUp} align="center">
           <MDBRow>
             <MDBCol>
@@ -112,10 +105,8 @@ const SignupForm = ({history}) => {
             Submit
           </MDBBtn>
         </Form>
-      </MDBCardBody>
-    </MDBCard>
   );
 };
 
 
-export default SignupForm;
+export default withRouter(SignupForm);

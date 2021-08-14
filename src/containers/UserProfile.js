@@ -12,10 +12,10 @@ import {
   MDBCol,
 } from "mdb-react-ui-kit";
 import "./UserProfile.css";
+import Orders from "../components/Orders";
 
 const UserProfile = () => {
   const [profile, setProfile] = useState([]);
-  const [order, setOrder] = useState([]);
 
   const token = localStorage.getItem("myJWT");
 
@@ -29,22 +29,11 @@ const UserProfile = () => {
       .then((result) => {
         setProfile(result.data.currentUser);
       });
-
-    axios
-      .get("http://localhost:3000/api/order/usersubmission", {
-        headers: {
-          Authorization: token,
-        },
-      })
-      .then((result) => {
-       result.data.bakedGoods.map((o) => {
-         return setOrder(o)
-       })
-      });
   }, [token]);
 
+  
+
   console.log(profile.firstName);
-  console.log(order.address);
 
   return (
     <div className="App container py-3" id="profilecontainer">
@@ -68,11 +57,20 @@ const UserProfile = () => {
             </MDBCol>
           </MDBRow>
           <MDBCardFooter>Orders</MDBCardFooter>
-          <MDBCardText>{order.address}<br/>{order.orderSummary}</MDBCardText>
+            <Orders/>
         </MDBCard>
       </MDBCol>
     </div>
   );
 };
 
+
+  /* <ul>
+              {orders.map((order) => (
+                <li key={order._id}>{order.address}</li>
+              ))}
+            </ul> */
+
+
 export default UserProfile;
+
