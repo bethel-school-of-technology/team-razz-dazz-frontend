@@ -8,7 +8,7 @@ import GalleryPage from "./containers/GalleryPage";
 import OrderPage from "./containers/OrderPage";
 import Footer from "./components/Footer";
 import UserProfile from "./containers/UserProfile";
-// import AdminView from "./containers/AdminView";
+import AdminView from "./containers/AdminView";
 import OrderSubmission from "./containers/OrderSubmission";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import ContactPage from "./containers/ContactPage";
@@ -27,6 +27,8 @@ export default function App() {
           <Route path="/adminorders">
             <AdminOrders />
           </Route>
+          <AuthenticatedRoute path="/adminview" component={AdminView}>
+          </AuthenticatedRoute>
           <AuthenticatedRoute
             path="/profile"
             component={UserProfile}
