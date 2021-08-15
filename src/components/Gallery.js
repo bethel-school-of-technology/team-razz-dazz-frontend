@@ -20,7 +20,7 @@ const Gallery = () => {
           </MDBCol>
           <MDBCol>
             <img
-              src={"https://noblecookie.s3.amazonaws.com/cookie2.jpg"}
+              src={"https://noblecookie.s3.amazonaws.com/cookie10.jpg"}
               className="img-fluid shadow-4"
               alt="..."
               id="galleryimage"
@@ -28,7 +28,7 @@ const Gallery = () => {
           </MDBCol>
           <MDBCol>
             <img
-              src={"https://noblecookie.s3.amazonaws.com/cookie3.jpg"}
+              src={"https://noblecookie.s3.amazonaws.com/cookie10.jpg"}
               className="img-fluid shadow-4"
               alt="..."
               id="galleryimage"
