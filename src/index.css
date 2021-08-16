@@ -18,3 +18,13 @@ code {
   font-family: 'Montserrat';
   src: local('Montserrat'), url(./assets/montserrat//Montserrat-Bold.ttf) format('ttf');
 }
+
+h1 {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./assets/montserrat//Montserrat-Bold.ttf) format('ttf');
+}
+
+h5 {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./assets/montserrat//Montserrat-Bold.ttf) format('ttf');
+}

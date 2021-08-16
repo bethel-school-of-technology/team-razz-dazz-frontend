@@ -42,6 +42,7 @@ const SignupForm = ({history}) => {
   return (
     
         <Form onSubmit={signUp} align="center">
+        <br/>
           <MDBRow>
             <MDBCol>
               <MDBInput

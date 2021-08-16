@@ -1,9 +1,9 @@
 const config = {
-  bucketName: "thenoblecookies",
-  dirName: "CookiePics",
+  bucketName: "noblecookie",
+  dirName: "usersubmissions",
   region: "us-east-1",
-  accessKeyId: "AKIARRDBSFQ5NOXWEKMT",
-  secretAccessKey: "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",
+  accessKeyId: "AKIARRDBSFQ5ADITPU67",
+  secretAccessKey: "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",
 };
 
 export default config;

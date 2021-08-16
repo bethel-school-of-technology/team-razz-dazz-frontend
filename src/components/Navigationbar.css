@@ -3,3 +3,8 @@
     height: auto;
 }
 
+#navlink {
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-style: unset;
+}

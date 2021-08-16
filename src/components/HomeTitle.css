@@ -13,13 +13,15 @@
 
 #homebutton1 {
   background-color: hotpink;
+  font-family: 'Montserrat';
   font-size: x-small;
-  font-weight: bolder;
+  font-weight: 900;
   color:rgb(255, 255, 255);
 }
 
 #homebutton2 {
   background-color: lightseagreen;
+  font-family: 'Montserrat';
   font-size: x-small;
   font-weight: bolder;
   color: rgb(255, 255, 255)

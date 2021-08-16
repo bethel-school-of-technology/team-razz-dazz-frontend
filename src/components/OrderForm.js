@@ -9,6 +9,7 @@ import {
   MDBCol,
   MDBRow
 } from "mdb-react-ui-kit";
+import S3Upload from "./S3Upload";
 import "../components/OrderForm.css";
 
 const OrderForm = ({ history }) => {
@@ -117,7 +118,7 @@ const OrderForm = ({ history }) => {
         <MDBRow>
           <MDBCol>
             <MDBInput
-              label="Whatcha having?"
+              label="Please provide a description of your design & order details"
               id="textAreaExample"
               textarea
               rows={4}
@@ -133,6 +134,7 @@ const OrderForm = ({ history }) => {
           Submit
         </MDBBtn>
       </Form>
+      <S3Upload/>
     </div>
   );
 };
