@@ -6,8 +6,7 @@ import {
   MDBCardBody,
   MDBCardTitle,
   MDBCardText,
-  MDBIcon,
-  MDBCardImage
+  MDBIcon
 } from "mdb-react-ui-kit";
 import "./UserProfile.css";
 
@@ -45,18 +44,15 @@ const AdminView = () => {
 
   return (
     <div>
+      <br />
+      <h1 align="center">Users</h1>
       <ul>
         {admin.map((admin) => (
           <li key={admin._id} style={{ padding: "10px" }}>
             <MDBCard style={{ maxWidth: "20rem", backgroundColor: "beige" }}>
-              <MDBCardImage
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                position="top"
-                alt="..."
-              />
               <MDBCardBody>
                 <MDBCardTitle style={{ fontSize: "14px" }}>
-                  Order #: {admin._id}
+                  User ID: {admin._id}
                 </MDBCardTitle>
                 <MDBCardText>
                   <MDBIcon fas icon="user" /> {admin.firstName} {admin.lastName}
@@ -72,28 +68,30 @@ const AdminView = () => {
           </li>
         ))}
       </ul>
-      <h1>Orders</h1>
+      <h1 align="center">Orders</h1>
       <ul>
         {adminOrders.map((adminOrder) => (
           <li key={adminOrder._id} style={{ padding: "10px" }}>
             <MDBCard style={{ maxWidth: "20rem", backgroundColor: "beige" }}>
-              <MDBCardImage
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                position="top"
-                alt="..."
-              />
               <MDBCardBody>
                 <MDBCardTitle style={{ fontSize: "14px" }}>
                   Order #: {adminOrder._id}
                 </MDBCardTitle>
                 <MDBCardText>
-                  <MDBIcon fas icon="user" /> {adminOrder.firstName} {adminOrder.lastName}
+                  <MDBIcon fas icon="user" /> {adminOrder.firstName}{" "}
+                  {adminOrder.lastName}
                 </MDBCardText>
                 <MDBCardText>
-                  <MDBIcon fas icon="envelope" /> {adminOrder.orderSummary}
+                  <MDBIcon fas icon="envelope" /> {adminOrder.email}
                 </MDBCardText>
                 <MDBCardText>
-                  <MDBIcon fas icon="mobile-alt" /> {admin.username}
+                  <MDBIcon fas icon="mobile-alt" /> {adminOrder.phoneNumber}
+                </MDBCardText>
+                <MDBCardText>
+                  <MDBIcon fas icon="map-marker-alt" /> {adminOrder.address}
+                </MDBCardText>
+                <MDBCardText>
+                  <MDBIcon fas icon="comment" /> {adminOrder.orderSummary}
                 </MDBCardText>
               </MDBCardBody>
             </MDBCard>

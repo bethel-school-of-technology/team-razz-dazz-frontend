@@ -33,6 +33,7 @@ const LoginForm = ({ history }) => {
             window.location.reload();
           } else {
             window.location.reload();
+            history.push('/login')
           }
         });
     }

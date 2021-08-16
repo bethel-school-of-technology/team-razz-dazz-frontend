@@ -8,7 +8,7 @@ const Gallery = () => {
   return (
     <div>
       <h1>Doth thoust like cookies?</h1>
-      <div class="d-flex align-items-start mb-3">
+      <div class="d-flex align-items-center mb-3">
         <MDBRow>
           <MDBCol>
             <img
@@ -34,10 +34,6 @@ const Gallery = () => {
               id="galleryimage"
             />
           </MDBCol>
-        </MDBRow>
-      </div>
-      <div class="d-flex align-items-start bg-light mb-3">
-        <MDBRow>
           <MDBCol>
             <img
               src={"https://noblecookie.s3.amazonaws.com/cookie4.jpg"}
@@ -54,6 +50,10 @@ const Gallery = () => {
               id="galleryimage"
             />
           </MDBCol>
+        </MDBRow>
+      </div>
+      <div class="d-flex align-items-center mb-3">
+        <MDBRow>
           <MDBCol>
             <img
               src={"https://noblecookie.s3.amazonaws.com/cookie6.jpg"}
@@ -62,10 +62,6 @@ const Gallery = () => {
               id="galleryimage"
             />
           </MDBCol>
-        </MDBRow>
-      </div>
-      <div class="d-flex align-items-start bg-light mb-3">
-        <MDBRow>
           <MDBCol>
             <img
               src={"https://noblecookie.s3.amazonaws.com/cookie7.jpg"}
@@ -90,10 +86,6 @@ const Gallery = () => {
               id="galleryimage"
             />
           </MDBCol>
-        </MDBRow>
-      </div>
-      <div class="d-flex align-items-start bg-light mb-3">
-        <MDBRow>
           <MDBCol>
             <img
               src={"https://noblecookie.s3.amazonaws.com/cookie10.jpg"}
@@ -102,6 +94,10 @@ const Gallery = () => {
               id="galleryimage"
             />
           </MDBCol>
+        </MDBRow>
+      </div>
+      <div class="d-flex align-items-start mb-3">
+        <MDBRow>
           <MDBCol>
             <img
               src={"https://noblecookie.s3.amazonaws.com/cookie11.jpg"}
