@@ -46,7 +46,7 @@ const AdminView = () => {
     <div>
       <br />
       <h1 align="center">Users</h1>
-      <ul>
+      <ul align="center" style={{ padding: "0px" }}>
         {admin.map((admin) => (
           <li key={admin._id} style={{ padding: "10px" }}>
             <MDBCard style={{ maxWidth: "20rem", backgroundColor: "beige" }}>
@@ -69,7 +69,7 @@ const AdminView = () => {
         ))}
       </ul>
       <h1 align="center">Orders</h1>
-      <ul>
+      <ul align="center" style={{ padding: "0px" }}>
         {adminOrders.map((adminOrder) => (
           <li key={adminOrder._id} style={{ padding: "10px" }}>
             <MDBCard style={{ maxWidth: "20rem", backgroundColor: "beige" }}>

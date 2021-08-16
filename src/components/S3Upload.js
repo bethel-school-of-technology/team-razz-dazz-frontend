@@ -17,7 +17,7 @@ const S3Upload = () => {
     return (
       <div>
         <Form.Group onChange={upload} controlId="formFile" className="mb-3">
-          <Form.Label>S3 Bucket Upload</Form.Label>
+          <Form.Label>Upload your design here!</Form.Label>
           <Form.Control type="file" />
         </Form.Group>
       </div>

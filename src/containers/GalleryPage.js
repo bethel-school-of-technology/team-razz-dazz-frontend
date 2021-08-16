@@ -1,10 +1,11 @@
 import React from "react";
-import Gallery from "../components/Gallery";
+import TheGallery from "../components/Gallery";
 
 const GalleryPage = () => {
   return (
-    <div className="App container py-3" align="center">
-      <Gallery />
+    <div style={{padding: "20px"}}>
+    <h1 align="center">Check out previous order from our happy customers!</h1>
+      <TheGallery />
     </div>
   );
 };
