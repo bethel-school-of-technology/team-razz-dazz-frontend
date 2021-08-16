@@ -16,8 +16,8 @@ export default function App() {
             </h5>
 
             <p>
-              Beautifully designed, carefully crafted custom cookies so good,
-              they'd make your grandma weep with jealousy!
+            “And above all, watch with glittering eyes the whole world around you because the greatest secrets are always hidden in the most unlikely places. Those who don't believe in magic will never find it.”
+― Roald Dahl
             </p>
           </MDBCol>
 
@@ -30,21 +30,25 @@ export default function App() {
                   Home
                 </a>
               </li>
+              <br />
               <li>
                 <a href="/gallery" className="text-white">
                   Gallery
                 </a>
               </li>
+              <br />
               <li>
                 <a href="/contactpage" className="text-white">
                   Contact Us
                 </a>
               </li>
+              <br />
               <li>
                 <a href="/signup" className="text-white">
                   Signup
                 </a>
               </li>
+              <br />
               <li>
                 <a href="/login" className="text-white">
                   Login
@@ -60,21 +64,21 @@ export default function App() {
               <MDBIcon
                 fab
                 icon="facebook-square"
-                size="`1x"
+                size="`1.5x"
                 href="https://www.facebook.com/"
                 style={{ padding: "5px" }}
               />
             </a>
 
             <a href="https://twitter.com/" className="text-white">
-              <MDBIcon fab icon="twitter-square" size="1x" />
+              <MDBIcon fab icon="twitter-square" size="1.5x" />
             </a>
 
-            <a href="https://www.instagram.com/" className="text-white">
+            <a href="https://www.instagram.com/explore/tags/thenoblecookie/?hl=en" className="text-white">
               <MDBIcon
                 fab
                 icon="instagram"
-                size="1x"
+                size="1.5x"
                 style={{ padding: "5px" }}
               />
             </a>
