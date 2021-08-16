@@ -99,6 +99,11 @@ const Navigationbar = ({history}) => {
                     </MDBNavbarLink>
                   </MDBNavbarItem>
                   <MDBNavbarItem>
+                    <MDBNavbarLink href="/adminview" style={{ color: "white" }}>
+                      Admin
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+                  <MDBNavbarItem>
                     <MDBNavbarLink href="/orderpage" style={{ color: "white" }}>
                       Order Now
                     </MDBNavbarLink>

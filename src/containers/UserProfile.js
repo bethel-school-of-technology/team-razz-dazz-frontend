@@ -28,12 +28,11 @@ const UserProfile = () => {
       })
       .then((result) => {
         setProfile(result.data.currentUser);
+      }, (error) => {
+        console.log("error")
       });
   }, [token]);
 
-  
-
-  console.log(profile.firstName);
 
   return (
     <div className="App container py-3" id="profilecontainer">
