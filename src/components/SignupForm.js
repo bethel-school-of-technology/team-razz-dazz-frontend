@@ -70,7 +70,7 @@ const SignupForm = ({history}) => {
                 label="Email"
                 id="form1"
                 type="text"
-                style={{ color: "white" }}
+                style={{ color: "black" }}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </MDBCol>
@@ -82,7 +82,7 @@ const SignupForm = ({history}) => {
                 label="Username"
                 id="form1"
                 type="text"
-                style={{ color: "white" }}
+                style={{ color: "black" }}
                 onChange={(e) => setUsername(e.target.value)}
               />
             </MDBCol>
@@ -94,7 +94,7 @@ const SignupForm = ({history}) => {
                 label="Password"
                 id="form1"
                 type="password"
-                style={{ color: "white" }}
+                style={{ color: "black" }}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </MDBCol>
