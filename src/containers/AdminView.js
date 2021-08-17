@@ -44,7 +44,7 @@ const AdminView = () => {
 
   return (
     <div>
-      {admin ? (
+      {admin && adminOrders ? (
         <>
           <br />
           <h1 align="center">Users</h1>
