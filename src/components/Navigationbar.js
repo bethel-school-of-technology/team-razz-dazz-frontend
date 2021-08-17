@@ -12,17 +12,30 @@ import {
 } from "mdb-react-ui-kit";
 import "./Navigationbar.css";
 import Cookie from "../assets/cookielogo.png";
+import axios from "axios";
 
 
-const Navigationbar = ({history}) => {
+const Navigationbar = ({ history }) => {
   const [isAuthenticating, setIsAuthenticating] = useState(true);
   const [isAuthenticated, userHasAuthenticated] = useState(false);
-  const token = localStorage.getItem("myJWT"); 
+  const token = localStorage.getItem("myJWT");
   const [showNavText, setShowNavText] = useState(false);
+  const [admin, setAdmin] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/api/user/admin", {
+        headers: {
+          Authorization: token,
+        },
+      })
+      .then((result) => {
+        console.log(result);
+        setAdmin(result.data.allUsers);
+      });
+  }, [token]);
 
 
-  
-  
   useEffect(() => {
     async function onLoad() {
       if (token && token !== undefined && token !== "") {
@@ -35,7 +48,7 @@ const Navigationbar = ({history}) => {
 
     onLoad();
   }, [token]);
-  
+
 
   async function handleLogout() {
     localStorage.removeItem("myJWT");
@@ -53,7 +66,7 @@ const Navigationbar = ({history}) => {
           </MDBNavbarBrand>
           <MDBNavbarToggler
             type="button"
-            style={{color: "white"}}
+            style={{ color: "white" }}
             data-target="#navbarText"
             aria-controls="navbarText"
             aria-expanded="false"
@@ -119,7 +132,12 @@ const Navigationbar = ({history}) => {
                       MY PROFILE
                     </MDBNavbarLink>
                   </MDBNavbarItem>
-                  <MDBNavbarItem>
+                  {! admin ? (
+                    <>
+                    </>
+                  ) : (
+                    <>
+                    <MDBNavbarItem>
                     <MDBNavbarLink
                       href="/adminview"
                       id="navlink"
@@ -128,6 +146,8 @@ const Navigationbar = ({history}) => {
                       ADMIN
                     </MDBNavbarLink>
                   </MDBNavbarItem>
+                    </>
+                  )}
                   <MDBNavbarItem>
                     <MDBNavbarLink
                       href="/orderpage"
