@@ -14,6 +14,7 @@ import {
 const LoginForm = ({ history }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [incorrectPassword, setIncorrectPassword] = useState("");
 
   const signIn = (event) => {
     event.preventDefault();
@@ -26,14 +27,14 @@ const LoginForm = ({ history }) => {
         .post("http://localhost:3000/api/user/login", req)
         .then((result) => {
           console.log(result);
-          if (result) {
+          if (result.data.status === 200) {
             const token = result.data.token;
             localStorage.setItem("myJWT", token);
             history.push("/profile");
             window.location.reload();
           } else {
-            window.location.reload();
-            history.push('/login')
+           setIncorrectPassword("Incorrect Username or Password")
+           console.log(result.data.message)
           }
         });
     }
@@ -45,6 +46,7 @@ const LoginForm = ({ history }) => {
           <br />
           <MDBRow>
             <MDBCol>
+            {incorrectPassword !== "" && <div style={{color: "red"}}>{incorrectPassword}</div>}
               <MDBInput
                 label="Username"
                 id="form1"

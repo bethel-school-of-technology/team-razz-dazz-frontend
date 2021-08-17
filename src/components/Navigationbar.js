@@ -53,6 +53,7 @@ const Navigationbar = ({history}) => {
           </MDBNavbarBrand>
           <MDBNavbarToggler
             type="button"
+            style={{color: "white"}}
             data-target="#navbarText"
             aria-controls="navbarText"
             aria-expanded="false"

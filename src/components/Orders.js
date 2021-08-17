@@ -10,6 +10,7 @@ import {
   MDBIcon
 } from "mdb-react-ui-kit";
 import "./Orders.css";
+import sesame from "../assets/sesame.gif";
 
 
 const Orders = () => {
@@ -38,7 +39,7 @@ const Orders = () => {
           <li key={order._id} style={{ padding: "10px" }}>
             <MDBCard style={{ maxWidth: "20rem", backgroundColor: "beige" }}>
               <MDBCardImage
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                src={sesame}
                 position="top"
                 alt="..."
               />
