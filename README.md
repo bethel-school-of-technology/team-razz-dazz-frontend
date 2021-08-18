@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# The Noble Cookie
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Description](#Description)
+- [Deployed Link](#Deployed-Link)
+- [Technologies](#Technologies)
+- [Code](#Code)
+- [Gif](#Gif)
+- [Author](#Author)
+- [Credits](#Credits)
+- [License](#License)
 
-In the project directory, you can run:
+## Description
 
-### `yarn start`
+Hello! Welcome to The Noble Cookie, an application for users to place cookie orders. This application was created for the final project of Bethel School of Technology. 
 
-Runs the app in the development mode.\
-Open [https://localhost:3000](https://localhost:3000) to view it in the browser.
+## Deployed-Link
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Click Here](TBD)
 
-### `yarn test`
+## Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [JavaScript](https://www.w3schools.com/js/)
+- [ReactJs](https://reactjs.org/)
+- [NodeJs](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [CSS](https://www.w3schools.com/css/)
+- [HTML](https://www.w3schools.com/html/)
+- [JSX](https://reactjs.org/docs/introducing-jsx.html)
+- [Nodemailer](https://nodemailer.com/about/)
+- [Font-Awesome](https://fontawesome.com/)
+- [AWS-S3-Bucket](https://aws.amazon.com/s3/)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+- [React-MDBootstrap](https://react-bootstrap.github.io/)
 
-### `yarn build`
+## Gif
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Gif](./noblecookie1.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Code
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Author
 
-### `yarn eject`
+Steven Searcy
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [GitHub](https://github.com/stevenaaronsearcy)
+- [linkedIn](https://www.linkedin.com/in/stevenasearcy/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Chad Crawford
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [GitHub](https://github.com/ckcrawford)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Mat Lukacs
 
-## Learn More
+- [GitHub](https://github.com/MathewLukacs)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Credits
 
-### Code Splitting
+- Taylor Newton, Ivan Torres, & Andrew Searcy!
+- [StackOverFlow](https://stackoverflow.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License]
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://www.mit.edu/~amini/LICENSE.md)
