@@ -37,7 +37,7 @@ Hello! Welcome to The Noble Cookie, an application for users to place cookie ord
 
 ## Gif
 
-![Gif](./noblecookie1.gif)
+![Gif](./noblecookie2.gif)
 
 ## Code
 
