@@ -72,7 +72,7 @@ const LoginForm = ({ history }) => {
           <MDBBtn
             onSubmit={signIn}
             id="signupbutton"
-            className="btn btn-outline-light btn-lg m-2"
+            className="btn btn-lg m-2"
           >
             Submit
           </MDBBtn>

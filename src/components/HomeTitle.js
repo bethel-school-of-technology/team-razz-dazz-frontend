@@ -9,16 +9,30 @@ const HomeTitle = () => {
       <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}>
         <div className="d-flex justify-content-center align-items-center h-100">
           <div className="text-white">
-            <h1 className="mb-3" id="hometitle5" style={{fontSize: "60px", fontFamily: "Sacramento"}}>The Noble Cookie</h1>
-            <h5 className="mb-4" id="hometitle2" style={{fontSize: "15px"}}>
-              Beautifully designed, carefully crafted custom cookies so good, they'd make your grandma weep with jealousy!
+            <h1
+              className="mb-3"
+              id="hometitle5"
+              style={{ fontSize: "90px", fontFamily: "Sacramento" }}
+            >
+              The Noble Cookie
+            </h1>
+            <h5 className="mb-4" id="hometitle2" style={{ fontSize: "22px" }}>
+              Beautifully Designed • Carefully Crafted • Custom Cookies
             </h5>
 
-            <MDBBtn id="homebutton1" className="btn btn-outline-light btn-lg m-2" href="/login">
+            <MDBBtn
+              id="homebutton1"
+              className="btn btn-outline-light btn-lg m-2"
+              href="/login"
+            >
               Already A Noble Cookie Addict? Click to Login
             </MDBBtn>
 
-            <MDBBtn id="homebutton2" className="btn btn-outline-light btn-lg m-2" href="/signup">
+            <MDBBtn
+              id="homebutton2"
+              className="btn btn-outline-light btn-lg m-2"
+              href="/signup"
+            >
               New to The Noble Cookie Experience? Sign Up Here!
             </MDBBtn>
           </div>

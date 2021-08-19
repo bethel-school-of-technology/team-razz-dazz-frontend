@@ -1,6 +1,7 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import Cookie from "../assets/cookielogo.png";
+import "./Footer.css";
 
 export default function App() {
   return (
@@ -16,41 +17,43 @@ export default function App() {
             </h5>
 
             <p>
-            “And above all, watch with glittering eyes the whole world around you because the greatest secrets are always hidden in the most unlikely places. Those who don't believe in magic will never find it.”
-― Roald Dahl
+              “And above all, watch with glittering eyes the whole world around
+              you because the greatest secrets are always hidden in the most
+              unlikely places. Those who don't believe in magic will never find
+              it.” ― Roald Dahl
             </p>
           </MDBCol>
 
           <MDBCol lg="3" md="6" className="mb-4 mb-md-0">
-            <h5 className="text-uppercase">menu</h5>
+            <h5 id="navheader">MENU</h5>
 
             <ul className="list-unstyled mb-0">
               <li>
-                <a href="/" className="text-white">
+                <a href="/" id="footerlink">
                   Home
                 </a>
               </li>
               <br />
               <li>
-                <a href="/gallery" className="text-white">
+                <a href="/gallery" id="footerlink">
                   Gallery
                 </a>
               </li>
               <br />
               <li>
-                <a href="/contactpage" className="text-white">
+                <a href="/contactpage" id="footerlink">
                   Contact Us
                 </a>
               </li>
               <br />
               <li>
-                <a href="/signup" className="text-white">
+                <a href="/signup" id="footerlink">
                   Signup
                 </a>
               </li>
               <br />
               <li>
-                <a href="/login" className="text-white">
+                <a href="/login" id="footerlink">
                   Login
                 </a>
               </li>
@@ -58,7 +61,7 @@ export default function App() {
           </MDBCol>
 
           <MDBCol lg="3" md="6" className="mb-4 mb-md-0">
-            <h5 className="text-uppercase mb-0">socials</h5>
+            <h5 id="navheader">SOCIALS</h5>
 
             <a href="https://www.facebook.com/" className="text-white">
               <MDBIcon
@@ -74,7 +77,10 @@ export default function App() {
               <MDBIcon fab icon="twitter-square" size="1.5x" />
             </a>
 
-            <a href="https://www.instagram.com/explore/tags/thenoblecookie/?hl=en" className="text-white">
+            <a
+              href="https://www.instagram.com/explore/tags/thenoblecookie/?hl=en"
+              className="text-white"
+            >
               <MDBIcon
                 fab
                 icon="instagram"

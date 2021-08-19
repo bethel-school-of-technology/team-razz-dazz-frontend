@@ -82,7 +82,7 @@ const Navigationbar = ({ history }) => {
                 <MDBNavbarLink
                   href="/gallery"
                   id="navlink"
-                  style={{ color: "white" }}
+                  
                 >
                   GALLERY
                 </MDBNavbarLink>
@@ -91,7 +91,7 @@ const Navigationbar = ({ history }) => {
                 <MDBNavbarLink
                   href="/contactpage"
                   id="navlink"
-                  style={{ color: "white" }}
+                  
                 >
                   CONTACT US
                 </MDBNavbarLink>
@@ -107,7 +107,7 @@ const Navigationbar = ({ history }) => {
                     <MDBNavbarLink
                       href="/signup"
                       id="navlink"
-                      style={{ color: "white" }}
+                      
                     >
                       SIGNUP
                     </MDBNavbarLink>
@@ -116,7 +116,7 @@ const Navigationbar = ({ history }) => {
                     <MDBNavbarLink
                       href="/login"
                       id="navlink"
-                      style={{ color: "white" }}
+                      
                     >
                       LOGIN
                     </MDBNavbarLink>
@@ -128,42 +128,42 @@ const Navigationbar = ({ history }) => {
                     <MDBNavbarLink
                       href="/profile"
                       id="navlink"
-                      style={{ color: "white" }}
+                      
                     >
                       MY PROFILE
                     </MDBNavbarLink>
                   </MDBNavbarItem>
-                  {! admin ? (
+                  {!admin ? (
                     <>
+                      <MDBNavbarItem>
+                        <MDBNavbarLink
+                          href="/orderpage"
+                          id="navlink"
+                          
+                        >
+                          ORDER NOW
+                        </MDBNavbarLink>
+                      </MDBNavbarItem>
                     </>
                   ) : (
                     <>
-                    <MDBNavbarItem>
-                    <MDBNavbarLink
-                      href="/adminview"
-                      id="navlink"
-                      style={{ color: "white" }}
-                    >
-                      ADMIN
-                    </MDBNavbarLink>
-                  </MDBNavbarItem>
+                      <MDBNavbarItem>
+                        <MDBNavbarLink
+                          href="/adminview"
+                          id="navlink"
+                          
+                        >
+                          ADMIN
+                        </MDBNavbarLink>
+                      </MDBNavbarItem>
                     </>
                   )}
-                  <MDBNavbarItem>
-                    <MDBNavbarLink
-                      href="/orderpage"
-                      id="navlink"
-                      style={{ color: "white" }}
-                    >
-                      ORDER NOW
-                    </MDBNavbarLink>
-                  </MDBNavbarItem>
                   <MDBNavbarItem>
                     <MDBNavbarLink
                       href="/login"
                       onClick={handleLogout}
                       id="navlink"
-                      style={{ color: "white" }}
+                      
                     >
                       LOG OUT
                     </MDBNavbarLink>
