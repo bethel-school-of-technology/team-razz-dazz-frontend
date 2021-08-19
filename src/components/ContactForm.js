@@ -106,10 +106,11 @@ const ContactForm = (props, { history }) => {
             />
           </MDBCol>
         </MDBRow>
+        <br/>
         <MDBBtn
           onSubmit={Contact}
           id="loginbutton"
-          className="btn btn-outline-light btn-lg m-2"
+          className="btn btn-lg m-2"
         >
           Submit
         </MDBBtn>

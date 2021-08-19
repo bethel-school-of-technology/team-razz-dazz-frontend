@@ -10,6 +10,7 @@ import {
   MDBCardFooter,
   MDBRow,
   MDBCol,
+  MDBBtn
 } from "mdb-react-ui-kit";
 import "./UserProfile.css";
 import Orders from "../components/Orders";
@@ -56,7 +57,16 @@ const UserProfile = () => {
             </MDBCol>
           </MDBRow>
           <MDBCardFooter>Orders</MDBCardFooter>
-            <Orders/>
+          <MDBCol>
+            <MDBBtn
+              href="/orderpage"
+              id="signupbutton"
+              className="btn btn-lg m-2"
+            >
+              Place a new order!
+            </MDBBtn>
+          </MDBCol>
+          <Orders />
         </MDBCard>
       </MDBCol>
     </div>

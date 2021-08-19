@@ -9,7 +9,7 @@ const Login = () => {
       <Row className="justify-content-center"></Row>
       <Row className="justify-content-center">
         <Col md="8" align="center">
-          <h1>Please login below</h1>
+          <h1>Login</h1>
           <LoginForm />
         </Col>
       </Row>
