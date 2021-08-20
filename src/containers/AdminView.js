@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useParams } from "react";
 import axios from "axios";
 import React from "react";
 import {
@@ -7,6 +7,7 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBIcon,
+  MDBBtn
 } from "mdb-react-ui-kit";
 import "./UserProfile.css";
 import Boohoo from "../components/Boohoo";
@@ -17,6 +18,8 @@ const AdminView = () => {
   const [adminOrders, setAdminOrder] = useState([]);
 
   const token = localStorage.getItem("myJWT");
+
+  const _id = useParams();
 
   useEffect(() => {
     axios
@@ -40,6 +43,24 @@ const AdminView = () => {
         console.log(result);
         setAdminOrder(result.data.allOrders);
       });
+
+     // handleDeleteClick = (adminOrder: ) => {  
+      //  axios    .delete(`http://localhost:3000/api/order/adminorderview${order.id}`)   
+      //   .then(() => {      
+     //      this.setState({        
+      //       allOrders: this.state.order.filter(p => p.id !== order.id)      });    });};
+
+      axios
+      .put("http://localhost:3000/api/user/" + _id, {
+        headers: {
+          Authorization: token,
+        },
+      })
+      .then((result) => {
+        console.log(result);
+      });
+
+
   }, [token]);
 
   return (
@@ -101,6 +122,10 @@ const AdminView = () => {
                       <MDBIcon fas icon="comment" /> {adminOrder.orderSummary}
                     </MDBCardText>
                   </MDBCardBody>
+
+                  <MDBBtn onClick={() => this.handleDeleteClick(adminOrder)} className='mx-2' color='danger'>
+        Danger
+      </MDBBtn>
                 </MDBCard>
               </li>
             ))}
