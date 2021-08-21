@@ -11,6 +11,7 @@ import {
 } from "mdb-react-ui-kit";
 import "./UserProfile.css";
 import Boohoo from "../components/Boohoo";
+//import { Router } from "react-router-dom";
 //import { TokenFileWebIdentityCredentials } from "aws-sdk";
 
 
@@ -73,8 +74,23 @@ const AdminView = () => {
 
   const onDeleteClick = (id) => {
     console.log(id)
-    axios.delete('http://localhost:3000/' + id).then(res => {
+    axios.put(`http://localhost:3000/api/order/${id}`,{
+      headers: {
+        Authorization: token,
+      },
+    })
+    .then(res => {
       console.log(res);
+      window.location.reload();
+    }) 
+    axios.put(`http://localhost:3000/api/user/${id}`,{
+      headers: {
+        Authorization: token,
+      },
+    })
+    .then(res => {
+      console.log(res);
+      window.location.reload();
     })
   }
 
@@ -106,6 +122,9 @@ const AdminView = () => {
                     <MDBCardText>
                       <MDBIcon fas icon="mobile-alt" /> {admin.username}
                     </MDBCardText>
+                    <MDBBtn onClick={() => onDeleteClick(admin._id)} className='mx-2' color='danger'>
+        DELETE
+      </MDBBtn>
                   </MDBCardBody>
                 </MDBCard>
               </li>
@@ -141,7 +160,7 @@ const AdminView = () => {
                   </MDBCardBody>
 
                   <MDBBtn onClick={() => onDeleteClick(adminOrder._id)} className='mx-2' color='danger'>
-        Danger
+        DELETE
       </MDBBtn>
                 </MDBCard>
               </li>
