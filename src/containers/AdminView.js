@@ -7,9 +7,11 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBIcon,
+  MDBBtn
 } from "mdb-react-ui-kit";
 import "./UserProfile.css";
 import Boohoo from "../components/Boohoo";
+//import { TokenFileWebIdentityCredentials } from "aws-sdk";
 
 
 const AdminView = () => {
@@ -17,6 +19,8 @@ const AdminView = () => {
   const [adminOrders, setAdminOrder] = useState([]);
 
   const token = localStorage.getItem("myJWT");
+
+  //const _id = useParams();
 
   useEffect(() => {
     axios
@@ -40,7 +44,41 @@ const AdminView = () => {
         console.log(result);
         setAdminOrder(result.data.allOrders);
       });
+
+
+
+     
+
+
+//      handleDeleteClick = (adminOrders ) => {  
+//        axios.delete(`http://localhost:3000/api/order/adminorderview${order.id}`)   
+//         .then(() => {      
+//           this.setState({        
+//             allOrders: this.state.order.filter(p => p.id !== order.id)      });    });};
+
+//       axios
+//       .put("http://localhost:3000/api/user/" + _id, {
+//        headers: {
+//          Authorization: token,
+//        },
+//      })
+// .then((result) => {
+// console.log(result);
+//      });
+
+
+      
+
   }, [token]);
+
+  const onDeleteClick = (id) => {
+    console.log(id)
+    axios.delete('http://localhost:3000/' + id).then(res => {
+      console.log(res);
+    })
+  }
+
+
 
   return (
     <div>
@@ -101,6 +139,10 @@ const AdminView = () => {
                       <MDBIcon fas icon="comment" /> {adminOrder.orderSummary}
                     </MDBCardText>
                   </MDBCardBody>
+
+                  <MDBBtn onClick={() => onDeleteClick(adminOrder._id)} className='mx-2' color='danger'>
+        Danger
+      </MDBBtn>
                 </MDBCard>
               </li>
             ))}
