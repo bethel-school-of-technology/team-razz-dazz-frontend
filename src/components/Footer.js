@@ -5,6 +5,8 @@ import "./Footer.css";
 
 export default function App() {
   return (
+    // <div className="footbody">
+    //   <main>
     <MDBFooter
       style={{ backgroundColor: "lightseagreen" }}
       className="text-white text-center text-lg-left"
@@ -102,5 +104,7 @@ export default function App() {
         </a>
       </div>
     </MDBFooter>
+      /* </main>
+    </div> */
   );
 }
