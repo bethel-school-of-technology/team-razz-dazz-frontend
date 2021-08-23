@@ -34,16 +34,16 @@ const Orders = () => {
 
   return (
     <div>
-      <ul>
+      <ul style={{padding: "0px"}}>
         {orders.map((order) => (
           <li key={order._id} style={{ padding: "10px" }}>
-            <MDBCard style={{ maxWidth: "20rem", backgroundColor: "beige" }}>
+            <MDBCard style={{ maxWidth: "22rem", backgroundColor: "beige" }}>
               <MDBCardImage
                 src={sesame}
                 position="top"
                 alt="..."
               />
-              <MDBCardBody>
+              <MDBCardBody align="center">
                 <MDBCardTitle style={{ fontSize: "14px" }}>
                   Order #: {order._id}
                 </MDBCardTitle>

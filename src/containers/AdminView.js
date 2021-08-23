@@ -122,9 +122,12 @@ const AdminView = () => {
                     <MDBCardText>
                       <MDBIcon fas icon="mobile-alt" /> {admin.username}
                     </MDBCardText>
-                    <MDBBtn onClick={() => onDeleteClick(admin._id)} className='mx-2' color='danger'>
-        DELETE
-      </MDBBtn>
+                    <MDBBtn
+                      onClick={() => onDeleteClick(admin._id)}
+                      style={{ backgroundColor: "red" }}
+                    >
+                      DELETE
+                    </MDBBtn>
                   </MDBCardBody>
                 </MDBCard>
               </li>
@@ -157,18 +160,19 @@ const AdminView = () => {
                     <MDBCardText>
                       <MDBIcon fas icon="comment" /> {adminOrder.orderSummary}
                     </MDBCardText>
+                    <MDBBtn
+                      onClick={() => onDeleteClick(adminOrder._id)} style={{backgroundColor: "red"}}
+                    >
+                      DELETE
+                    </MDBBtn>
                   </MDBCardBody>
-
-                  <MDBBtn onClick={() => onDeleteClick(adminOrder._id)} className='mx-2' color='danger'>
-        DELETE
-      </MDBBtn>
                 </MDBCard>
               </li>
             ))}
           </ul>
         </>
       ) : (
-        <Boohoo/>
+        <Boohoo />
       )}
     </div>
   );
