@@ -46,7 +46,7 @@ Some words from the bakers husband, and group member, Chad Crawford:
 ## Code
 
  - Chad Crawford's featured code -
-
+```
  // GET order information/new orders
 router.get("/usersubmission", async (req, res, next) => {
   let myToken = req.headers.authorization;
@@ -74,9 +74,10 @@ router.get("/usersubmission", async (req, res, next) => {
     }
   }
 });
+```
 
  - Mat Lukac's featured code -
-
+```
   const onDeleteClick = (id) => {
     console.log(id)
     axios.put(`http://localhost:3000/api/order/${id}`,{
@@ -98,9 +99,10 @@ router.get("/usersubmission", async (req, res, next) => {
       window.location.reload();
     })
   }
+  ```
 
  - Steven Searcy's featured code -
-
+```
 router.post("/send", (req, res, next) => {
   var firstName = req.body.firstName;
   var lastName = req.body.lastName;
@@ -144,7 +146,7 @@ router.post("/send", (req, res, next) => {
     }
   });
 });
-
+```
 ## Author
 
 Steven Searcy
