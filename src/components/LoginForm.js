@@ -42,41 +42,49 @@ const LoginForm = ({ history }) => {
 
 
   return (
-        <Form onSubmit={signIn} align="center">
-          <br />
-          <MDBRow>
-            <MDBCol>
-            {incorrectPassword !== "" && <div style={{color: "red"}}>{incorrectPassword}</div>}
-              <MDBInput
-                label="Username"
-                id="form1"
-                type="text"
-                style={{ color: "black" }}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </MDBCol>
-          </MDBRow>
-          <br />
-          <MDBRow>
-            <MDBCol>
-              <MDBInput
-                label="Password"
-                id="form1"
-                type="password"
-                style={{ color: "black" }}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </MDBCol>
-          </MDBRow>
-          <br />
-          <MDBBtn
-            onSubmit={signIn}
-            id="signupbutton"
-            className="btn btn-lg m-2"
-          >
-            Submit
-          </MDBBtn>
-        </Form>
+    <Form onSubmit={signIn} align="center">
+      <br />
+      <MDBRow>
+        <MDBCol>
+          {incorrectPassword !== "" && (
+            <div style={{ color: "red" }}>{incorrectPassword}</div>
+          )}
+          <MDBInput
+            label="Username"
+            id="form1"
+            type="text"
+            style={{ color: "black" }}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </MDBCol>
+      </MDBRow>
+      <br />
+      <MDBRow>
+        <MDBCol>
+          <MDBInput
+            label="Password"
+            id="form1"
+            type="password"
+            style={{ color: "black" }}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </MDBCol>
+      </MDBRow>
+      <br />
+      <MDBBtn onSubmit={signIn} id="signupbutton" className="btn btn-lg m-2">
+        Submit
+      </MDBBtn>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br/>
+    </Form>
   );
 };
 

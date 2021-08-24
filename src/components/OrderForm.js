@@ -3,6 +3,7 @@ import axios from "axios";
 import Form from "react-bootstrap/Form";
 import { MDBBtn } from "mdb-react-ui-kit";
 import { withRouter } from "react-router";
+import { validEmail } from "../regex";
 import "../components/SignupForm.css";
 import {
   MDBInput,
@@ -19,6 +20,12 @@ const OrderForm = ({ history }) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [address, setAddress] = useState("");
   const [orderSummary, setOrderSummary] = useState("");
+  const [emailErr, setEmailErr] = useState(false);
+  const validate = () => {
+    if (!validEmail.test(email)) {
+      setEmailErr(true);
+    }
+  };
 
   const Order = (event) => {
     event.preventDefault();
@@ -66,6 +73,7 @@ const OrderForm = ({ history }) => {
   return (
     <div className="">
       <Form onSubmit={Order} align="center">
+        {emailErr && email !== <div style={{ color: "red" }}>Email is invalid</div>}
         <MDBRow>
           <MDBCol>
             <MDBInput
@@ -128,13 +136,14 @@ const OrderForm = ({ history }) => {
         </MDBRow>
         <MDBBtn
           onSubmit={Order}
+          onClick={validate}
           id="loginbutton"
           className="btn btn-outline-light btn-lg m-2"
         >
           Submit
         </MDBBtn>
       </Form>
-      <S3Upload/>
+      <S3Upload />
     </div>
   );
 };
