@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import { withRouter } from "react-router";
 import { MDBBtn, MDBRow, MDBCol, MDBInput } from "mdb-react-ui-kit";
 import "../components/SignupForm.css";
+import { validEmail, validPassword } from "../regex";
 
 
 const SignupForm = ({history}) => {
@@ -12,6 +13,16 @@ const SignupForm = ({history}) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [emailErr, setEmailErr] = useState(false);
+  const [pwdError, setPwdError] = useState(false);
+  const validate = () => {
+    if (!validEmail.test(email)) {
+      setEmailErr(true);
+    }
+    if (!validPassword.test(password)) {
+      setPwdError(true);
+    }
+  };
 
 
   const signUp = (event) => {
@@ -40,74 +51,81 @@ const SignupForm = ({history}) => {
   };
 
   return (
-    
-        <Form onSubmit={signUp} align="center">
-        <br/>
-          <MDBRow>
-            <MDBCol>
-              <MDBInput
-                label="First Name"
-                id="form1"
-                type="text"
-                style={{ color: "black" }}
-                onChange={(e) => setFirstName(e.target.value)}
-              />
-            </MDBCol>
-            <MDBCol>
-              <MDBInput
-                label="Last Name"
-                id="form1"
-                type="text"
-                style={{ color: "black" }}
-                onChange={(e) => setLastName(e.target.value)}
-              />
-            </MDBCol>
-          </MDBRow>
-          <br />
-          <MDBRow>
-            <MDBCol>
-              <MDBInput
-                label="Email"
-                id="form1"
-                type="text"
-                style={{ color: "black" }}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </MDBCol>
-          </MDBRow>
-          <br />
-          <MDBRow>
-            <MDBCol>
-              <MDBInput
-                label="Username"
-                id="form1"
-                type="text"
-                style={{ color: "black" }}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </MDBCol>
-          </MDBRow>
-          <br />
-          <MDBRow>
-            <MDBCol>
-              <MDBInput
-                label="Password"
-                id="form1"
-                type="password"
-                style={{ color: "black" }}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </MDBCol>
-          </MDBRow>
-          <br />
-          <MDBBtn
-            onSubmit={signUp}
-            id="signupbutton"
-            className="btn btn-lg m-2"
-          >
-            Submit
-          </MDBBtn>
-        </Form>
+    <Form onSubmit={signUp} align="center">
+      <br />
+      <MDBRow>
+        {emailErr && <div style={{ color: "red" }}>Email is invalid</div>}
+        {pwdError && <div style={{ color: "red" }}>Password is invalid</div>}
+        <MDBCol>
+          <MDBInput
+            label="First Name"
+            id="form1"
+            type="text"
+            style={{ color: "black" }}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+        </MDBCol>
+        <MDBCol>
+          <MDBInput
+            label="Last Name"
+            id="form1"
+            type="text"
+            style={{ color: "black" }}
+            onChange={(e) => setLastName(e.target.value)}
+          />
+        </MDBCol>
+      </MDBRow>
+      <br />
+      <MDBRow>
+        <MDBCol>
+          <MDBInput
+            label="Email"
+            id="form1"
+            type="text"
+            style={{ color: "black" }}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </MDBCol>
+      </MDBRow>
+      <br />
+      <MDBRow>
+        <MDBCol>
+          <MDBInput
+            label="Username"
+            id="form1"
+            type="text"
+            style={{ color: "black" }}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </MDBCol>
+      </MDBRow>
+      <br />
+      <MDBRow>
+        <MDBCol>
+          <MDBInput
+            label="Password"
+            id="form1"
+            type="password"
+            style={{ color: "black" }}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </MDBCol>
+      </MDBRow>
+      <br />
+      <MDBBtn
+        onSubmit={signUp}
+        onClick={validate}
+        id="signupbutton"
+        className="btn btn-lg m-2"
+      >
+        Submit
+      </MDBBtn>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br/>
+    </Form>
   );
 };
 
